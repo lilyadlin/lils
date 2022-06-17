@@ -1,0 +1,147 @@
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(boo.JPG);
+    background-size: 30%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Stoke', serif;
+    color: black;
+    text-shadow: 0 0 20px white;
+}
+.hero .btn {
+    /* Positioning and sizing */
+    display: inline-block;
+    width: 200px;
+    text-align: center center;
+    
+    /* Padding and margins */
+    padding: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    /* Border styles */
+    border: 3px;
+    border-radius: 20px;
+    background-color: #FFC9E2;
+    box-shadow: 0 0 25px 0 hotpink;
+
+}
+body {
+ text-align: left;
+ margin-top: 80px;
+ padding: 20px; 
+ outline: none;
+ border: 0px;
+ font-family: 'Crimson Text', serif;
+}
+#topNav img {
+    height: 80px;
+    padding: 40px;
+}
+ul {
+ text-align: left;
+}
+#academics, #fashion {
+ background-color: #FFC9E2;
+ text-align: left;
+ margin: -30px;
+ padding: 100px;
+}
+#leadership img {
+    margin: 20px;
+}
+#about, #leadership, #contact {
+ text-align: right;
+ margin: -30px;
+ padding: 100px;
+}
+#footer img {
+ width: 50px;
+ padding: 100px;
+}
+#footer {
+    text-align: center;
+    background-color: #FFC9E2;
+    margin: -30px;
+}
+p {
+ font-size: 1em;
+}
+h3 {
+ font-size: 2em;
+}
+h1 {
+ font-size: 3em;
+ text-align: center;
+}
+a {
+ color: black;
+}
+#topNav {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 80px;
+ display: flex;
+ align-items: center;
+ border: 20px;
+ box-shadow: 0 0 25px 0 #FF7DB6;
+}
+#topNav * {
+ display: inline;
+}
+#topNav li {
+    margin: 20px;
+}
+#topNav li a {
+    color: black;
+    text-decoration: none;
+}
+#photo {
+ width: 100%;
+ margin-top: -30px;
+ padding: 0px;
+}
+#looks img {
+    width: 33%;
+    padding: 100px;
+    align-items: center;
+}
+@media screen and (max-width: 900px) {
+ #topNav a {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  display: block;
+ }
+ #topNav {
+  padding-top: 0px;
+  padding-bottom: 0px;
+ }
+ #about, #academics, #leadership, #contact, #fashion {
+  padding: 40px;
+ }
