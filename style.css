@@ -8,13 +8,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(boo.JPG);
-    background-size: 30%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
-
+.hero img {
+    width: 30%;
+    position: top center;
+    display: fixed;
+}
 .hero h1 {
     /* Text styles */
     font-size: 5em;
