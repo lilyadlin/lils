@@ -76,8 +76,8 @@ ul {
  padding: 100px;
 }
 #footer img {
- width: 50px;
- padding: 100px;
+ width: 75px;
+ padding: 20px;
 }
 #footer {
     text-align: center;
@@ -130,7 +130,7 @@ a {
     align-items: center;
 }
 @media screen and (max-width: 900px) {
- #topNav a {
+ #footer and #topNav a {
   padding-top: .5em;
   padding-bottom: .5em;
   display: inline-block;
