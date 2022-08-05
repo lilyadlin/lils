@@ -28,13 +28,12 @@
     /* Positioning and sizing */
     display: inline-block;
     width: 200px;
-    text-align: center center;
     
     /* Padding and margins */
-    padding: 40px;
+    padding: 1em;
     margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     
     color: white;
     text-decoration: none;
