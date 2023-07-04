@@ -1,4 +1,3 @@
-
 .hero {
     /* Sizing */
     width: 100vw;
@@ -70,6 +69,10 @@ ul {
 #leadership img {
     margin: 20px;
 }
+ #academics img {
+    width: 50%;
+    margin: 20px;
+ }
 #about, #leadership, #contact {
  text-align: right;
  margin: -30px;
@@ -123,6 +126,12 @@ a {
  width: 100%;
  margin-top: -30px;
  padding: 0px;
+ float: !important;
+}
+#fashion img{
+    width: 33%;
+    padding: 100px;
+    align-items: center;
 }
 #looks img {
     width: 33%;
