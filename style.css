@@ -126,7 +126,7 @@ a {
  width: 100%;
  margin-top: -30px;
  padding: 0px;
- float: !important;
+ align-items: center;
 }
 #fashion img{
     width: 33%;
