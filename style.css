@@ -69,10 +69,6 @@ ul {
 #leadership img {
     margin: 20px;
 }
- #academics img {
-    width: 50%;
-    margin: 20px;
- }
 #about, #leadership, #contact {
  text-align: right;
  margin: -30px;
@@ -96,6 +92,7 @@ h3 {
 h1 {
  font-size: 3em;
  text-align: center;
+ margin-bottom: 0px;
 }
 a {
  color: black;
@@ -123,12 +120,16 @@ a {
     text-decoration: none;
 }
 #photo {
- width: 100%;
- margin-top: -30px;
- padding: 0px;
- align-items: center;
+ width: 60%;
+ padding: 10px;
+ align-items: left;
 }
-#fashion img{
+#fashion img {
+    width: 33%;
+    padding: 100px;
+    align-items: center;
+}
+#academics img {
     width: 33%;
     padding: 100px;
     align-items: center;
@@ -138,6 +139,45 @@ a {
     padding: 100px;
     align-items: center;
 }
+/* Style for the container */
+.about-container {
+    display: flex;
+    align-items: center; /* This will vertically align items if they're not the same height */
+    justify-content: space-between; /* This will add space between the photo and the text */
+    margin-top: 0px;
+    margin: 20px; /* Adjust as needed for spacing */
+}
+
+/* Style for the photo */
+.about-photo {
+    flex: 1; /* Allows the photo to grow and take up space */
+    max-width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Adjust as needed for spacing */
+}
+
+/* Style for the text */
+.about-text {
+    flex: 2; /* Allows the text to take up twice as much space as the photo */
+    padding: 20px; /* Adjust as needed for spacing */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the photo and text on top of each other */
+    }
+
+    .about-photo {
+        max-width: 100%; /* Allow the photo to take the full width */
+        margin-right: 0; /* Reset margin */
+    }
+
+    .about-text {
+        /* The text will naturally take up the full width below the photo */
+    }
+}
+
 @media screen and (max-width: 900px) {
  #footer and #topNav a {
   padding-top: .5em;
