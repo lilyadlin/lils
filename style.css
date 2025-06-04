@@ -1,0 +1,203 @@
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero img {
+    width: 30%;
+    position: top center;
+    display: fixed;
+}
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Stoke', serif;
+    color: black;
+    text-shadow: 0 0 20px white;
+}
+.hero .btn {
+    /* Positioning and sizing */
+    display: inline-block;
+    width: 200px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    /* Border styles */
+    border: 3px;
+    border-radius: 20px;
+    background-color: #FFC9E2;
+    box-shadow: 0 0 25px 0 hotpink;
+
+}
+body {
+ text-align: left;
+ margin-top: 80px;
+ padding: 20px; 
+ outline: none;
+ border: 0px;
+ font-family: 'Crimson Text', serif;
+}
+#topNav img {
+    height: 80px;
+    padding: 40px;
+}
+ul {
+ text-align: left;
+}
+#academics, #fashion {
+ background-color: #FFC9E2;
+ text-align: left;
+ margin: -30px;
+ padding: 100px;
+}
+#leadership img {
+    margin: 20px;
+}
+#about, #leadership, #contact {
+ text-align: right;
+ margin: -30px;
+ padding: 100px;
+}
+#footer img {
+ width: 75px;
+ padding: 20px;
+}
+#footer {
+    text-align: center;
+    background-color: #FFC9E2;
+    margin: -30px;
+}
+p {
+ font-size: 1em;
+}
+h3 {
+ font-size: 2em;
+}
+h1 {
+ font-size: 3em;
+ text-align: center;
+ margin-bottom: 0px;
+}
+a {
+ color: black;
+}
+#topNav {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 80px;
+ display: flex;
+ align-items: center;
+ border: 20px;
+ box-shadow: 0 0 25px 0 #FF7DB6;
+}
+#topNav * {
+ display: inline;
+}
+#topNav li {
+    margin: 20px;
+}
+#topNav li a {
+    color: black;
+    text-decoration: none;
+}
+#photo {
+ width: 60%;
+ padding: 10px;
+ align-items: left;
+}
+#fashion img {
+    width: 33%;
+    padding: 100px;
+    align-items: center;
+}
+#academics img {
+    width: 33%;
+    padding: 100px;
+    align-items: center;
+}
+#looks img {
+    width: 33%;
+    padding: 100px;
+    align-items: center;
+}
+/* Style for the container */
+.about-container {
+    display: flex;
+    align-items: center; /* This will vertically align items if they're not the same height */
+    justify-content: space-between; /* This will add space between the photo and the text */
+    margin-top: 0px;
+    margin: 20px; /* Adjust as needed for spacing */
+}
+
+/* Style for the photo */
+.about-photo {
+    flex: 1; /* Allows the photo to grow and take up space */
+    max-width: 50%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Adjust as needed for spacing */
+}
+
+/* Style for the text */
+.about-text {
+    flex: 2; /* Allows the text to take up twice as much space as the photo */
+    padding: 20px; /* Adjust as needed for spacing */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the photo and text on top of each other */
+    }
+
+    .about-photo {
+        max-width: 100%; /* Allow the photo to take the full width */
+        margin-right: 0; /* Reset margin */
+    }
+
+    .about-text {
+        /* The text will naturally take up the full width below the photo */
+    }
+}
+
+@media screen and (max-width: 900px) {
+ #footer and #topNav a {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  display: inline-block;
+ }
+ #topNav {
+  padding-top: 0px;
+  padding-bottom: 0px;
+ }
+ #about, #academics, #leadership, #contact, #fashion {
+  padding: 40px;
+ }
+ .hero {
+    max-width: 100%;
+ }
+ .hero h1 {
+    font-size: 32px;
+ }
+ .hero .btn {
+    font-size: 22px;
+ }
+}
