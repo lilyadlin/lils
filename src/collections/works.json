@@ -18,11 +18,11 @@
 	},
 	{
 		"name": "Luon Models",
-		"description": "Company Website",
-		"tags": ["Company","Website","Branding"],
+		"description": "Agency Company Website",
+		"tags": ["Agency","Website"],
 		"image": "/assets/works/luonmodels.jpg",
 		"video": "/assets/works/luonmodels.mp4",
-		"url": "https://luonmodels.netlify.app/"
+		"url": "/work/luonmodels"
 	},
 	{
 		"name": "Ricoui",

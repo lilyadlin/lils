@@ -12,10 +12,10 @@
 </div>
 
 <script>
-import Matter from "matter-js"; // 修改为默认导入
+import Matter from "matter-js";
 
 (() => {
-  // 懒加载：当 .tricks-view 进入视口时初始化
+
   const target = document.querySelector(".tricks-view");
   if (!target) {
     console.error("[Tricks] .tricks-view not found");
@@ -39,7 +39,7 @@ import Matter from "matter-js"; // 修改为默认导入
   async function initTricksAnimation() {
     const container = document.querySelector(".tool-stack-box") || document.querySelector(".matter-wrapper");
     const canvasHost = document.querySelector(".tricks-canvas") as HTMLElement;
-    const domLayer = document.querySelector(".tricks-elements") as HTMLElement; // 添加类型断言
+    const domLayer = document.querySelector(".tricks-elements") as HTMLElement;
 
     if (!container || !canvasHost || !domLayer) {
       console.error(
@@ -48,36 +48,36 @@ import Matter from "matter-js"; // 修改为默认导入
       return;
     }
 
-    // 配置（调大元素尺寸 & 缩小边缘间隙）
-    const pad = 2;      // 内边距，越小越贴边
-    const margin = 1;   // 静态边界与容器边缘距离，越小越贴边
-    const count = 15;   // 元素数量
-    const noRotate = false; // 不旋转可设为 true
-    const scaleFactor = 0.75; // 全局放大因子：>1 放大，<1 缩小
+    // Config (enlarge element size & reduce edge gaps)
+    const pad = 2;      // Inner padding; smaller value sticks closer to edges
+    const margin = 1;   // Distance between static boundaries and container edges; smaller value sticks closer
+    const count = 15;   // Number of elements
+    const noRotate = false; // Set to true to disable rotation
+    const scaleFactor = 0.75; // Global scaling factor: >1 enlarge, <1 shrink
 
-    // 尺寸
+    // Dimensions
     let { width: cw, height: ch } = container.getBoundingClientRect();
     let W = Math.max(cw - pad, 100);
     let H = Math.max(ch - pad, 100);
 
-    // 物理引擎
+    // Physics engine
     const engine = Matter.Engine.create();
     const world = engine.world;
 
-    // 鼠标拖拽（事件落在 canvasHost 上）
+    // Mouse drag (events fall on canvasHost)
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
       mouse: Matter.Mouse.create(canvasHost),
       constraint: { render: { visible: false }, stiffness: 1 },
     });
     Matter.World.add(world, mouseConstraint);
 
-    // 边界（地面与左右墙）
+    // Boundaries (ground and side walls)
     let ground = Matter.Bodies.rectangle(W / 2, H - margin, W, 14, { isStatic: true });
     let wallL = Matter.Bodies.rectangle(margin, H / 2, 14, H, { isStatic: true });
     let wallR = Matter.Bodies.rectangle(W - margin, H / 2, 14, H, { isStatic: true });
     Matter.World.add(world, [ground, wallL, wallR]);
 
-    // 图标路径（按需调整）
+    // Icon paths (adjust as needed)
     const iconUrls = [
       "/assets/stack/astro.png",
       "/assets/stack/css.png",
@@ -95,12 +95,12 @@ import Matter from "matter-js"; // 修改为默认导入
       "/assets/stack/vscode.png",
     ];
 
-    // 预加载图片，获取 naturalWidth/Height
+    // Preload images to obtain naturalWidth/Height
     function loadImage(url: string) {
       return new Promise<HTMLImageElement>((resolve, reject) => {
         const img = new Image();
         img.decoding = "async";
-        img.loading = "eager"; // 懒加载触发后尽快加载
+        img.loading = "eager"; // Load as soon as lazy-load is triggered
         img.src = url;
         img.onload = () => resolve(img);
         img.onerror = () => reject(new Error("Image load failed: " + url));
@@ -114,10 +114,10 @@ import Matter from "matter-js"; // 修改为默认导入
       console.error("[Tricks] image load failed:", e);
     }
 
-    // 尺寸策略：显著增大目标面积区间（适配 720x480）
+    // Sizing strategy: significantly increase target area range (adapted for 720x480)
     function computeAreaRange() {
-      // 以容器面积为基准，提高图标面积比例
-      // 720*480 ≈ 345600；这里让单个图标面积大致在 1/20 ~ 1/10 容器面积之间
+      // Use container area as the base; increase icon area proportion
+      // 720*480 ≈ 345600; here a single icon area is roughly between 1/20 ~ 1/10 of the container area
       const baseArea = W * H;
       const areaMin = clamp(baseArea / 20, 12000, 30000);
       const areaMax = clamp(baseArea / 10, 20000, 50000);
@@ -125,7 +125,7 @@ import Matter from "matter-js"; // 修改为默认导入
     }
     let { areaMin, areaMax } = computeAreaRange();
 
-    // 图标刚体类（矩形，尺寸基于 naturalWidth/Height）
+    // Icon rigid body class (rectangle, size based on naturalWidth/Height)
     class IconBody {
       w: number;
       h: number;
@@ -141,29 +141,29 @@ import Matter from "matter-js"; // 修改为默认导入
             ? img.naturalWidth / img.naturalHeight
             : 1;
 
-        // 目标面积（随机落在区间内）
+        // Target area (random within range)
         const A = randRange(areaMin, areaMax);
-        // 推导宽高：w = sqrt(A*r), h = w/r
+        // Derive width/height: w = sqrt(A*r), h = w/r
         let w = Math.sqrt(A * r);
         let h = w / r;
 
-        // 全局放大或缩小
+        // Global scale up or down
         w *= scaleFactor;
         h *= scaleFactor;
 
         this.w = w;
         this.h = h;
 
-        // 物理矩形刚体
+        // Physics rectangle body
         this.body = Matter.Bodies.rectangle(x, y, this.w, this.h, {
           restitution: 0.35,
           friction: 0.1,
           frictionAir: 0.02,
           density: clamp((this.w * this.h) / 40000, 0.001, 0.02),
-          inertia: noRotate ? Infinity : undefined, // 不旋转：设置惯性无穷
+          inertia: noRotate ? Infinity : undefined, // No rotation: set infinite inertia
         });
 
-        // DOM：容器 + img
+        // DOM: container + img
         this.el = document.createElement("div");
         this.el.className = "tricks-circle";
         this.el.style.width = `${this.w}px`;
@@ -172,11 +172,11 @@ import Matter from "matter-js"; // 修改为默认导入
         const node = img.cloneNode(true) as HTMLImageElement;
         node.style.width = "100%";
         node.style.height = "100%";
-        node.style.objectFit = "contain"; // 或 "cover"
+        node.style.objectFit = "contain"; // or "cover"
         node.alt = node.alt || "icon";
 
         this.el.appendChild(node);
-        domLayer.appendChild(this.el); // 这里 domLayer 已经确保不为 null
+        domLayer.appendChild(this.el); // domLayer is ensured to be non-null here
       }
 
       update() {
@@ -190,7 +190,7 @@ import Matter from "matter-js"; // 修改为默认导入
       }
     }
 
-    // 创建图标刚体
+    // Create icon rigid bodies
     const total = Math.min(iconsImgs.length, count);
     const iconsBodies: IconBody[] = [];
     for (let i = 0; i < total; i++) {
@@ -198,16 +198,16 @@ import Matter from "matter-js"; // 修改为默认导入
     }
     Matter.World.add(world, iconsBodies.map((it) => it.body));
 
-    // 启动引擎
+    // Start engine
     const runner = Matter.Runner.create();
     Matter.Runner.run(runner, engine);
 
-    // 每次物理步进后，同步 DOM
+    // After each physics step, sync DOM
     Matter.Events.on(engine, "afterUpdate", () => {
       iconsBodies.forEach((it) => it.update());
     });
 
-    // 自适应尺寸：更新边界位置，并重新计算面积区间
+    // Responsive sizing: update boundary positions and recompute area range
     window.addEventListener("resize", () => {
       const rect = container.getBoundingClientRect();
       W = Math.max(rect.width - pad, 100);
@@ -223,7 +223,7 @@ import Matter from "matter-js"; // 修改为默认导入
     });
   }
 
-  // 工具函数（IIFE 外也可用）
+  // Utility functions (also usable outside the IIFE)
   function clamp(v: number, min: number, max: number) {
     return Math.max(min, Math.min(max, v));
   }

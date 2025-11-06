@@ -36,9 +36,9 @@ if (typeof logo === 'string') {
 	data-aos-duration="500"
 	data-aos-once="true"
 >
-    <div class="flex items-center gap-2 sm:gap-3 rounded-2xl bg-neutral-900/85 dark:bg-neutral-900/85 text-neutral-100 shadow-[0_6px_28px_rgba(0,0,0,0.25)] ring-1 ring-white/10 backdrop-blur-xl px-2 py-2 max-w-[92vw]">
+    <div class="flex items-center gap-1 sm:gap-2 rounded-2xl bg-neutral-900/85 dark:bg-neutral-900/85 text-neutral-100 shadow-[0_6px_28px_rgba(0,0,0,0.25)] ring-1 ring-white/10 backdrop-blur-xl px-2 py-2 max-w-[92vw]">
 		<!-- Logo block -->
-        <div class="shrink-0 h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-neutral-800 grid place-items-center ring-1 ring-white/10 overflow-hidden">
+        <div class="shrink-0 h-10 w-10 sm:h-10 sm:w-10 rounded-full bg-neutral-800 grid place-items-center ring-1 ring-white/10 overflow-hidden">
             {logoSrc ? (
                 <img src={logoSrc} alt="logo" class="h-full w-full object-cover" loading="lazy" />
             ) : (
@@ -47,7 +47,7 @@ if (typeof logo === 'string') {
 		</div>
 
         <!-- Middle pills (tags + optional github) -->
-        <div class="flex items-center gap-2sm:gap-3 overflow-x-auto scrollbar-none max-w-[46vw] sm:max-w-[52vw] md:max-w-[56vw] pr-1">
+        <div class="flex items-center gap-1 sm:gap-1 overflow-x-auto scrollbar-none max-w-[46vw] sm:max-w-[52vw] md:max-w-[56vw] pr-1">
             {tags && tags.map((t) => (
                 <span class=" hidden font-light sm:inline-flex items-center h-10 px-3 sm:px-3 rounded-xl bg-neutral-800/80 ring-1 ring-white/10 text-neutral-300 text-sm whitespace-nowrap">
                     {t}
@@ -72,7 +72,7 @@ if (typeof logo === 'string') {
 				href={url}
 				target="_blank"
 				rel="nofollow noopener"
-				class="inline-flex items-center h-10 sm:h-11 px-4 sm:px-5 rounded-xl bg-yellow-300 text-neutral-900 font-medium hover:bg-yellow-200 transition-colors whitespace-nowrap"
+				class="inline-flex items-center h-10 sm:h-11 px-4 sm:px-5 rounded-xl bg-yellow-300 text-neutral-900 text-sm  hover:bg-yellow-200 transition-colors whitespace-nowrap"
 			>
 				{visitLabel}
 			</a>

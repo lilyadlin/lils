@@ -10,8 +10,20 @@ export const POSTS_PER_PAGE = 6;
 // 生成分页路径
 export async function getStaticPaths() {
   const allPosts = await getCollection("post");
-  // 使用顶层定义的POSTS_PER_PAGE常量
-  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+
+  // 按发布日期排序文章
+  let posts = allPosts.sort(
+    (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+  );
+
+  // 查找特色文章，在列表页需要从主列表中移除
+  const featuredPost = posts.find((post) => post.data.featured);
+  if (featuredPost) {
+    posts = posts.filter((post) => post.data.featured !== true);
+  }
+
+  // 使用移除特色文章后的文章数量计算总页数
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
   return Array.from({ length: totalPages }, (_, i) => {
     const page = i + 1;

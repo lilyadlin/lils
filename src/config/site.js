@@ -3,18 +3,19 @@
 const SITE_URL = process.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com/';
 
 export const siteConfig = {
-	title: "Rico Portfolio",
+	title: "Ricoui Portfolio",
 	author: "Ricoui",
 	url: SITE_URL,
 	mail: "hello@ricoui.com",
-	resume: "#",
+	// resume add your resume file path here: /assets/resume.pdf
+	resume: "https://ricoui.com/",
 	utm: {
 		source: `${SITE_URL}`,
 		medium: "referral",
 		campaign: "navigation",
 	},
 	meta:{
-		title: "Rico Portfolio",
+		title: "Ricoui Portfolio",
 		description: "I'm Rico, a web designer passionate about both design and code. Currently developing a personal product for the design community.",
 		keywords: "web designer, portfolio, design, code, personal website",
 		image: `${SITE_URL}/og.jpg`,

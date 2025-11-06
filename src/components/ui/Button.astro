@@ -46,7 +46,7 @@ const currentSizeClasses = sizeClasses[size];
   target={type === "disabled" ? undefined : target}
   class={`${
     type === "solid"
-      ? `flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1.5 ${currentSizeClasses.padding} rounded-xl bg-gradient-to-b from-white to-[#edf1fa] dark:from-[#15233b] dark:to-[#0f1b2d] border-[1px] border-[#f3f5ff] dark:border-[#243757] max-w-60 transition duration-400 ease-in-out hover:translate-y-[-2px] hover:shadow-[0px_6px_9px_0_rgba(61,99,171,0.15)] dark:hover:shadow-[0px_6x_9px_0_rgba(59,123,217,0.25)]`
+      ? `flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1.5 ${currentSizeClasses.padding} rounded-xl bg-gradient-to-b from-white to-[#edf1fa] dark:from-[#15233b] dark:to-[#0f1b2d] border-[1px] border-primary/20 dark:border-[#243757] max-w-60 transition duration-400 ease-in-out hover:translate-y-[-2px] hover:shadow-[0px_6px_9px_0_rgba(61,99,171,0.15)] dark:hover:shadow-[0px_6x_9px_0_rgba(59,123,217,0.25)]`
       : type === "fill"
       ? `flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1.5 ${currentSizeClasses.padding} rounded-xl bg-btn-primary dark:bg-btn-primary-dark border-[0] border-[rgba(138,127,255,0.2)] shadow-[0px_2px_3px_0_rgba(0,0,0,0.1)] max-w-60 transition duration-400 ease-in-out hover:bg-btn-primary-hover dark:hover:bg-btn-primary-dark-hover hover:translate-y-[-2px] hover:shadow-[0px_6px_9px_0_rgba(61,99,171,0.15)]  dark:shadow-[0px_6px_9px_0_rgba(0,0,0,0.2)]`
       : type === "disabled"
@@ -58,11 +58,11 @@ const currentSizeClasses = sizeClasses[size];
   onclick={type === "disabled" ? "return false;" : undefined}
 >
   {type === "solid" ? (
-    <div class={`flex gap-1 items-center justify-center ${currentSizeClasses.fontSize} font-medium text-center text-[#6f6c8f] dark:text-[#c9d7f2]`}>
+    <div class={`flex gap-1 items-center justify-center ${currentSizeClasses.fontSize} font-medium text-center text-neutral-700 dark:text-neutral-300`}>
       <slot />
     </div>
   ) : type === "fill" ? (
-    <span class={`flex gap-1 items-center justify-center ${size === "md" ? "text-sm" : currentSizeClasses.fontSize} font-medium text-center text-white`}>
+    <span class={`flex gap-1 items-center justify-center ${size === "md" ? "text-sm" : currentSizeClasses.fontSize} font-medium text-center text-neutral-50`}>
       <slot />
     </span>
   ) : type === "disabled" ? (
