@@ -34,11 +34,12 @@ A modern, high-performance designer portfolio website template built with Astro.
 ### Using Package Manager
 
 ```bash
-# Using npm
-npm install
 
 # Using pnpm (recommended)
 pnpm install
+
+# Using npm
+npm install
 
 # Using yarn
 yarn install
@@ -179,14 +180,14 @@ I'm Rico, a web/UI designer passionate about creating fun and creative work. I h
 
 Or add me on WeChat—let’s be friends.
 
-<img src="public/wechat-rico.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://ricoui.com/assets/wechat.png" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ## 💜 Support the Author
 
 If you’ve found this helpful, even a small contribution can greatly encourage creators. Thank you!
 
-<img src="public/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://ricoui.com/assets/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 <a href="https://ko-fi.com/T6T817U4KZ" target="_blank" style="display:inline-block;margin:.5rem auto 1rem;" data-astro-cid-wlrjxfd7=""><img height="44" style=" border:0px;height:44px;" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" data-astro-cid-wlrjxfd7=""></a>
 

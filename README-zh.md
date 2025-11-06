@@ -32,11 +32,14 @@
 ### 使用包管理器
 
 ```bash
-# 使用 npm
-npm install
 
 # 使用 pnpm (推荐)
 pnpm install
+
+
+# 使用 npm
+npm install
+
 
 # 使用 yarn
 yarn install
@@ -167,7 +170,7 @@ export const siteConfig = {
 
 - [Astro](https://astro.build) - 优秀的静态站点生成器
 - [Tailwind CSS](https://tailwindcss.com) - 实用优先的 CSS 框架
-- 所有为这个项目做出贡献的开发者
+
 
 ## 📝 更新日志d
 
@@ -180,7 +183,7 @@ export const siteConfig = {
 
 或者添加我的微信，交个朋友
 
-<img src="public/wechat-rico.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://ricoui.com/assets/wechat.png" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ## 💜 支持作者
@@ -188,7 +191,7 @@ export const siteConfig = {
 
 如果觉得有所帮助的话，一点点支持就可以大大激励创作者的热情，感谢！
 
-<img src="public/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://ricoui.com/assets/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ---
