@@ -149,6 +149,11 @@ export const siteConfig = {
 在 `src/content/post/` 目录下创建新的 MDX 文件。
 
 
+## 使用素材
+
+- **Programming Sticker**: [Figma rogramming-sticker-1-0](https://www.figma.com/community/file/1392100849031958853/programming-sticker-1-0)
+- **Bento Cards**：[Figma Bento Cards](https://www.figma.com/community/file/1231184483170475120)
+- **Social Cards**: [Figma Bento 2.5d](https://www.figma.com/community/file/1232620929235403629/bento-2-5d-widgets)
 
 ## 📧 联系方式
 
