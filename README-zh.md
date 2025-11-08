@@ -2,7 +2,7 @@
 
 一个基于 Astro 构建的现代化、高性能设计师个人作品集网站模板。采用复古蓝色主题，支持暗色模式，具有精美的动画效果和优秀的用户体验。
 
-![Astro](https://img.shields.io/badge/Astro-5.14.1-FF5D01?logo=astro&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-5.15.4-FF5D01?logo=astro&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.14-38B2AC?logo=tailwind-css&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
@@ -20,7 +20,7 @@
 
 ## 🛠️ 技术栈
 
-- **框架**: [Astro](https://astro.build) 5.14.1
+- **框架**: [Astro](https://astro.build) 5.15.4 (兼容 v6)
 - **样式**: [Tailwind CSS](https://tailwindcss.com) 4.1.14
 - **动画**: [AOS](https://michalsnik.github.io/aos/)
 - **物理引擎**: [Matter.js](https://brm.io/matter-js/)
@@ -146,7 +146,15 @@ export const siteConfig = {
 
 ### 添加博客文章
 
-在 `src/content/post/` 目录下创建新的 MDX 文件。
+在 `src/content/post/` 目录下创建新的 MDX 文件。项目使用 Astro v5 Content Layer API 和 `glob` 加载器来管理内容集合，确保与 Astro v6 兼容。
+
+**注意**：此模板已完全升级到 Astro v5.15 标准，并兼容 Astro v6：
+- ✅ 使用新的 Content Layer API (`glob` 加载器)
+- ✅ 使用 `entry.id` 替代已弃用的 `entry.slug`
+- ✅ 使用 `render(entry)` 替代已弃用的 `entry.render()`
+- ✅ 使用 `import.meta.env` 替代 `process.env`
+- ✅ 使用 `import.meta.glob()` 替代已弃用的 `Astro.glob()`
+- ✅ 所有 `getStaticPaths()` 的 params 都是字符串类型（v6 要求）
 
 
 ## 使用素材
@@ -177,9 +185,16 @@ export const siteConfig = {
 - [Tailwind CSS](https://tailwindcss.com) - 实用优先的 CSS 框架
 
 
-## 📝 更新日志d
+## 📝 更新日志
 
-查看 [CHANGELOG.md](CHANGELOG.md) 了解版本更新历史。
+### 最新更新 (2024)
+
+- **升级到 Astro 5.15.4** - 完全符合 Astro v5.15 标准，兼容 Astro v6
+- **内容集合升级** - 使用新的 Content Layer API，移除了所有旧版 API
+- **API 现代化** - 所有已弃用的 API 已更新为最新标准
+- **性能优化** - 优化了构建和运行时性能
+
+查看 [CHANGELOG.md](CHANGELOG.md) 了解完整版本更新历史。
 
 
 ## 关于作者

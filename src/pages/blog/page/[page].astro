@@ -7,7 +7,9 @@ import { getCollection } from "astro:content";
 // 定义每页显示的文章数量
 export const POSTS_PER_PAGE = 6;
 
-// 生成分页路径
+// 根据 Astro v5/v6，对于 SSG 模式下的分页路由，仍然需要使用 getStaticPaths()
+// 这是因为需要告诉 Astro 在构建时生成哪些页面
+// 注意：params 必须是字符串类型（符合 v6 要求）
 export async function getStaticPaths() {
   const allPosts = await getCollection("post");
 
@@ -25,21 +27,18 @@ export async function getStaticPaths() {
   // 使用移除特色文章后的文章数量计算总页数
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
+  // 返回所有分页路径，确保 params.page 是字符串类型（v6 要求）
   return Array.from({ length: totalPages }, (_, i) => {
     const page = i + 1;
     return {
       params: { page: page.toString() },
-      props: { page }
+      props: { page: page.toString() }
     };
   });
 }
 
-// 添加类型注解
-interface Props {
-  page: string;
-}
-
-const { page }: Props = Astro.props;
+// 从 props 获取页码（在 SSG 模式下通过 getStaticPaths 传递）
+const { page } = Astro.props;
 const currentPage = parseInt(page);
 ---
 

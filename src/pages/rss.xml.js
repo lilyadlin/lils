@@ -7,13 +7,15 @@ export async function GET(context) {
     title: 'Rico Portfolio Template Astro',
     description: 'Astro Blog Template by Rico UI',
     site: context.site,
-    items: blog.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      // ...post.data,
-      link: `/blog/${post.slug}/`,
-      stylesheet: '/rss/pretty-feed-v3.xsl',
-    })),
+    items: blog.map((post) => {
+      const link = `/blog/${post.id}/`;
+      return {
+        title: post.data.title,
+        pubDate: post.data.publishDate,
+        description: post.data.description,
+        link,
+        stylesheet: '/rss/pretty-feed-v3.xsl',
+      };
+    }),
   });
 }

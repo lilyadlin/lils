@@ -5,8 +5,6 @@ import PageHeader from "@/components/elements/PageHeader.astro";
 import ActionBar from "@/components/widgets/ActionBar.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
-//自动导入 Image 组件和图像
-// const allImages = await Astro.glob('../../assets/work/ricoblog2024/*.{jpg,png,webp}');
 
 // 手动导入图片
 import P_01 from "../../assets/work/ricoblog2024/P_01.jpg";
@@ -29,7 +27,7 @@ import logoUrl from "../../assets/work/ricoblog2024/logo.png";
 		<main class="work-wrapper">
 				<PageHeader
 					title="Rico Designer Blog 2024"
-					tags={["Designer","Portfolio","Open Source"]} 
+					tags={["Designer","Portfolio","Open Source"]}
 					className="mb-6 md:mb-8"
 				>
 				</PageHeader>
@@ -52,11 +50,7 @@ import logoUrl from "../../assets/work/ricoblog2024/logo.png";
 						<Image src={img} alt={`Rico Blog 2024 设计图 ${index + 1}`} class="w-full h-full object-cover" loading="lazy" decoding="async" quality={100}/>
 						</picture>
 					))}
-					<!-- {images.map((img, index) => (
-						<picture class="picture mt-8 md:mt-12 mb-8 md:mb-12 rounded-2xl overflow-hidden">
-						<Image src={img.default} alt={`Image ${index + 1}`} class="w-full h-full object-cover" loading="lazy" decoding="async" quality={100}/>
-						</picture>
-					))} -->
+
 				</div>
 			</section>
 		</main>

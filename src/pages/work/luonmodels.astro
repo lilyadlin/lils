@@ -6,7 +6,8 @@ import ActionBar from "@/components/widgets/ActionBar.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
 //自动导入 Image 组件和图像
-const allImages = await Astro.glob('../../assets/work/luonmodels/*.{jpg,png,webp}');
+const allImagesModules = import.meta.glob('../../assets/work/luonmodels/*.{jpg,png,webp}', { eager: true });
+const allImages = Object.values(allImagesModules) as Array<{ default: any }>;
 const logoUrl = "https://luonmodels.vercel.app/favicon.png";
 ---
 <PostLayout

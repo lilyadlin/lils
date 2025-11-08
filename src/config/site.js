@@ -1,6 +1,6 @@
 // Get site URL from environment variable, use default value if not set
 // Note: Please set the correct PUBLIC_SITE_URL in .env file after first deployment
-const SITE_URL = process.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com/';
+const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com/';
 
 export const siteConfig = {
 	title: "Ricoui Portfolio",

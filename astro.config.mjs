@@ -6,10 +6,9 @@ import { fileURLToPath } from "url";
 import path from "path";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// 从环境变量获取站点 URL，如果没有设置则使用默认值
-// 注意：首次部署后请务必在 .env 文件中设置正确的 PUBLIC_SITE_URL
-const siteUrl = process.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com/';
+// Get the site URL from environment variables, or use the default value if not set
+// Note: After the first deployment, be sure to set the correct PUBLIC_SITE_URL in the .env file
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://portfolio.ricoui.com/';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,10 +22,6 @@ export default defineConfig({
         '@': path.resolve(__dirname, './src')
       }
     }
-  },
-
-  legacy: {
-    collections: true,
   },
 
   server: {
