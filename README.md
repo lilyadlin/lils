@@ -1,6 +1,6 @@
 # lily Portfolio - Designer Portfolio Website
 
-> [中文文档](README-zh.md) | English
+i did use a fyeeeee astro template as a base before customizing!!!
 
 A modern, high-performance designer portfolio website template built with Astro. Features a retro blue theme, dark mode support, beautiful animations, and excellent user experience.
 
