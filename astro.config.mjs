@@ -13,7 +13,7 @@ const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://lilyadlin.github.io'
 // https://astro.build/config
 export default defineConfig({
   site: siteUrl,
-  base: '/',
+  base: '/lils',
   envPrefix: 'PUBLIC_',
   vite: {
     plugins: [tailwindcss()],
