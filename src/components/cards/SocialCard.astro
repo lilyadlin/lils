@@ -1,5 +1,7 @@
 ---
 import social from "@/collections/social.json";
+import { base } from "@/config/site";
+
 const { displaySocialIds } = Astro.props;
 // 配置要显示的社交媒体 ID（留空则显示所有）
 //const displaySocialIds: number[] = [1, 2, 3]; // 只显示 ID 为 1, 2, 3 的社交媒体
@@ -15,26 +17,29 @@ const filteredSocial = social.filter(item => {
 
 <div class="social-cards-wrapper">
   <div class="social-list">
-    {filteredSocial.map((item, index) => (
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-item"
-        style={`--index: ${index}; --total: ${filteredSocial.length};`}
-      >
-        <img
-          src={item.image}
-          alt={item.name}
-          class="social-image"
-        />
-        <div class="social-info">
-          <div class="social-username">
-            @{item.username}
+    {filteredSocial.map((item, index) => {
+      const imageSrc = item.image.startsWith('http') || item.image.startsWith('data:') ? item.image : base + item.image;
+      return (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-item"
+          style={`--index: ${index}; --total: ${filteredSocial.length};`}
+        >
+          <img
+            src={imageSrc}
+            alt={item.name}
+            class="social-image"
+          />
+          <div class="social-info">
+            <div class="social-username">
+              @{item.username}
+            </div>
           </div>
-        </div>
-      </a>
-    ))}
+        </a>
+      );
+    })}
   </div>
 </div>
 
