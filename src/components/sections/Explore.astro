@@ -1,6 +1,8 @@
 ---
 import SectionHeader from "@/components/elements/SectionHeader.astro";
 import Matter from "@/components/ui/Matter.astro";
+import { base } from "@/config/site";
+
 interface Props {
   title?: string;
   description?: string;
@@ -19,7 +21,7 @@ const {title, description
         <div class="explore-list w-full relative flex flex-col gap-3 sm:gap-4">
             <!-- Passion 4 Fashion Card -->
             <div class="explore-column explore-column-2 w-full">
-                <a href="/work/passion-4-fashion#outfits" class="block">
+                <a href={base + "/work/passion-4-fashion#outfits"} class="block">
                     <div class="explore-item bg-bg-secondary/75   dark:bg-bg-secondary-dark relative overflow-hidden rounded-xl border border-primary/15 dark:border-neutral-700/50 explore-item-3 h-[180px] sm:h-[200px]"
   data-aos="fade-up-sm"
   data-aos-delay="700"
@@ -29,12 +31,12 @@ const {title, description
                             <h3>Passion 4 Fashion</h3>
                         </div>
                         <div class="explore-figure computer absolute right-[5%] sm:right-[-10%] md:right-[-7%] bottom-[14%] w-[120px] sm:w-[130px] md:w-[148px] h-auto">
-                            <img src="/assets/tools/retro-computer.png" alt="Explore 1" class="w-full h-full object-cover z-10 relative">
+                            <img src={base + "assets/tools/retro-computer.png"} alt="Explore 1" class="w-full h-full object-cover z-10 relative">
                             <div class="computer-screen absolute inset-0 w-[92px] sm:w-[100px] md:w-[116px] h-[76px] sm:h-[86px] md:h-[96px] top-[10.5%] left-[10%] rounded-[8px] rounded-b-[3px] overflow-hidden z-20">
                               <video
                                 id="explore-computer-video"
-                                src="/assets/tools/dreamcore.mp4"
-                                poster="/assets/tools/dreamcore.jpg"
+                                src={base + "assets/tools/dreamcore.mp4"}
+                                poster={base + "assets/tools/dreamcore.jpg"}
                                 autoplay
                                 loop
                                 muted

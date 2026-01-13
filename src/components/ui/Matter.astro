@@ -15,6 +15,7 @@
 import Matter from "matter-js";
 
 (() => {
+  const base = import.meta.env.BASE_URL;
 
   const target = document.querySelector(".tricks-view");
   if (!target) {
@@ -79,13 +80,13 @@ import Matter from "matter-js";
 
     // Icon paths (adjust as needed)
     const iconUrls = [
-      "/assets/stack/matcha.png",
-      "/assets/stack/heels.png",
-      "/assets/stack/art.png",
-      "/assets/stack/flight.png",
-      "/assets/stack/camera.png",
-      "/assets/stack/computer.png",
-      "/assets/stack/soysauce.png"
+      `${base}assets/stack/matcha.png`,
+      `${base}assets/stack/heels.png`,
+      `${base}assets/stack/art.png`,
+      `${base}assets/stack/flight.png`,
+      `${base}assets/stack/camera.png`,
+      `${base}assets/stack/computer.png`,
+      `${base}assets/stack/soysauce.png`
     ];
 
     // Preload images to obtain naturalWidth/Height
