@@ -33,8 +33,10 @@ const {
 const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
 const expandId = `workcard-expand-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
 
-// Add base path for internal links
+// Add base path for internal links and assets
 const href = url.startsWith('http') ? url : base + url;
+const imageSrc = image.startsWith('http') || image.startsWith('data:') ? image : base + image;
+const videoSrc = video ? (video.startsWith('http') ? video : base + video) : undefined;
 ---
 
 <article
@@ -49,12 +51,12 @@ const href = url.startsWith('http') ? url : base + url;
 >
   <!-- Image/video container -->
   <div class="relative overflow-hidden aspect-video rounded-xl">
-    {video ? (
+    {videoSrc ? (
       <!-- Video -->
       <video
         id={videoId}
-        src={video}
-        poster={image}
+        src={videoSrc}
+        poster={imageSrc}
         autoplay
         loop
         muted
@@ -66,13 +68,13 @@ const href = url.startsWith('http') ? url : base + url;
         controlslist="nodownload noplaybackrate nofullscreen noremoteplayback"
         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       >
-        <source src={video} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ) : (
       <!-- Image -->
       <img
-        src={image}
+        src={imageSrc}
         alt={name}
         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10"
         loading="lazy"
