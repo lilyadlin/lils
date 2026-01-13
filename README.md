@@ -1,4 +1,4 @@
-# lily Portfolio - Designer Portfolio Website
+# lily Portfolio 
 
 i did use a fyeeeee astro template as a base before customizing!!!
 
@@ -140,14 +140,6 @@ Edit the CSS variables in the `src/styles/global.css` file:
 }
 ```
 
-### Add Works
-
-Add your work information in `src/collections/works.json`.
-
-### Add Blog Posts
-
-Create new MDX files in the `src/content/post/` directory. The project uses Astro v5 Content Layer API with `glob` loader for content collections, ensuring compatibility with Astro v6.
-
 **Note**: This template has been fully upgraded to Astro v5.15 standards and is compatible with Astro v6:
 - ✅ Uses new Content Layer API (`glob` loader)
 - ✅ Uses `entry.id` instead of deprecated `entry.slug`
@@ -162,48 +154,11 @@ Create new MDX files in the `src/content/post/` directory. The project uses Astr
 - **Bento Cards**：[Figma Bento Cards](https://www.figma.com/community/file/1231184483170475120)
 - **Social Cards**: [Figma Bento 2.5d](https://www.figma.com/community/file/1232620929235403629/bento-2-5d-widgets)
 
-
-## 📧 Contact
-
-- **Author**: lilyui
-- **Blog**: [lilyui.com](https://github.com/lilycc)
-- **Email**: hello@lilyui.com
-- **Twitter**: [@lilyuii](https://x.com/lilyuii)
-- **GitHub**: [@lilycc](https://github.com/lilycc)
-
-
-## 💡 Other Products
-
-- **lily Blog** - Open Source: [https://github.com/lilycc/public-portfolio-site](https://github.com/lilycc/public-portfolio-site)
-
-- **OG Gallery**: [lilyog.com](https://lilyog.com/)
-
-
 ## 🙏 Acknowledgments
 
 - [Astro](https://astro.build) - Excellent static site generator
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
 - All developers who contributed to this project
-
-
-## About the Author
-
-I'm lily, a web/UI designer passionate about creating fun and creative work. I have experience in UI/UX design and am currently focused on web design, visual implementation, and exploring development projects. I regularly update my blog on <a href="https://lilyui.com/" target="_blank">lily's Blog</a>. You can also follow me on Xiaohongshu  [@lily的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 X [@lilyuii](https://x.com/lilyuii).
-
-
-Or add me on WeChat—let’s be friends.
-
-<img src="https://lilyui.com/assets/wechat.png" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
-
-
-## 💜 Support the Author
-
-If you’ve found this helpful, even a small contribution can greatly encourage creators. Thank you!
-
-<img src="https://lilyui.com/assets/zanshangma.jpg" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
-
-<a href="https://ko-fi.com/T6T817U4KZ" target="_blank" style="display:inline-block;margin:.5rem auto 1rem;" data-astro-cid-wlrjxfd7=""><img height="44" style=" border:0px;height:44px;" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" data-astro-cid-wlrjxfd7=""></a>
-
 ## 📝 Changelog
 
 ### Latest Updates (2024)
