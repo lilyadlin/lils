@@ -4,6 +4,7 @@ interface Props {
   image: string;         // Required
   url: string;          // Required
   description?: string;  // Optional
+  expandedDescription?: string; // Optional, for expandable text
   tags?: string[];      // Optional
   video?: string;       // Optional
   isShow?: boolean;     // Optional, default true
@@ -15,6 +16,7 @@ interface Props {
 const {
   name,
   description = '',
+  expandedDescription,
   url,
   image,
   tags = [],
@@ -27,6 +29,7 @@ const {
 
 // Generate stable id for each video for precise playback control
 const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
+const expandId = `workcard-expand-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
 ---
 
 <article
@@ -101,6 +104,10 @@ const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toL
     "px-1 pt-6 pb-2",
     layout === 'featured' ? "md:px-1 md:pt-6 md:pb-2" : ""
   ]}>
+    {expandedDescription && (
+      <input id={expandId} type="checkbox" class="peer sr-only" />
+    )}
+
     <!-- Title and link icon -->
     <div class="flex items-start justify-between gap-3 mb-3">
       <h3 class:list={[
@@ -110,24 +117,46 @@ const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toL
         {name}
       </h3>
 
-      <!-- Link icon -->
-      <div class="flex-shrink-0 mt-1">
-        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light transition-all duration-300 group-hover:bg-primary dark:group-hover:bg-primary-light group-hover:text-white dark:group-hover:text-neutral-900 group-hover:rotate-45">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+      <!-- Link / expand icon -->
+      <div class="flex-shrink-0 mt-1 relative z-20">
+        {expandedDescription ? (
+          <label
+            for={expandId}
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light transition-all duration-300 peer-checked:bg-primary peer-checked:text-white dark:peer-checked:bg-primary-light dark:peer-checked:text-neutral-900 peer-checked:rotate-45 cursor-pointer"
           >
-            <path d="M7 7h10v10"></path>
-            <path d="M7 17 17 7"></path>
-          </svg>
-        </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </label>
+        ) : (
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light transition-all duration-300 group-hover:bg-primary dark:group-hover:bg-primary-light group-hover:text-white dark:group-hover:text-neutral-900 group-hover:rotate-45">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </div>
+        )}
       </div>
     </div>
 
@@ -143,13 +172,33 @@ const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toL
     )}
 
     <!-- Description -->
-    {description && (
+    {description && !expandedDescription && (
       <p class:list={[
         "text-neutral-600 dark:text-neutral-400 leading-relaxed",
         layout === 'featured' ? "text-base md:text-lg line-clamp-2" : "text-sm line-clamp-2"
       ]}>
         {description}
       </p>
+    )}
+
+    {description && expandedDescription && (
+      <div class="space-y-1">
+        <!-- Collapsed text -->
+        <p class:list={[
+          "text-neutral-600 dark:text-neutral-400 leading-relaxed peer-checked:hidden",
+          layout === 'featured' ? "text-base md:text-lg line-clamp-2" : "text-sm line-clamp-2"
+        ]}>
+          {description}
+        </p>
+
+        <!-- Expanded text -->
+        <p class:list={[
+          "hidden text-neutral-600 dark:text-neutral-400 leading-relaxed peer-checked:block",
+          layout === 'featured' ? "text-base md:text-lg" : "text-sm"
+        ]}>
+          {expandedDescription}
+        </p>
+      </div>
     )}
   </div>
 

@@ -1,0 +1,111 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+
+const workTitle = "Frost Undergraduate Research";
+const workDescription = "Did mathematical research in graph theory + dynamic network models";
+const workTags = ["Research", "Mathematics", "Graph Theory", "Academic", "Publishing", "Presentations"];
+---
+<PostLayout
+	title={workTitle}
+	description="Undergraduate research in graph theory and dynamic network models, resulting in a peer-reviewed publication."
+	keywords="Graph Theory, Mathematics, Research, Pick Functions, Cauchy Transforms, Schur Complements, Academic Publishing"
+>
+	<div class="work article">
+		<main class="work-wrapper">
+				<PageHeader
+					title={workTitle}
+					tags={workTags}
+					className="mb-6 md:mb-8"
+				>
+				</PageHeader>
+			</section>
+			<div class="site-container m-auto">
+				<SeparatorLine />
+			</div>
+			<section class="article-content">
+				<div class="site-container mx-auto my-8 md:my-16 ">
+					<div>
+						<p>
+							The summer before my senior year at Cal Poly, I did undergraduate research in graph theory + dynamic network models. It turned into a peer-reviewed paper on how you can represent certain rational Pick functions using graph-based models (via Cauchy transforms and tools like Schur complements). I remember thinking how strange this type of math was: it looks abstract at first, but it's extremely structural underneath. Once you build the model, you can literally see how changing the graph changes the function's behavior.
+						</p>
+						<p>
+							The published paper is here: <a href="https://www.sciencedirect.com/science/article/pii/S0024379525004525?via%3Dihub" target="_blank" rel="noopener noreferrer" class="text-primary dark:text-primary-light hover:underline">https://www.sciencedirect.com/science/article/pii/S0024379525004525?via%3Dihub</a>
+						</p>
+
+						<h3 class="text-xl md:text-2xl font-brand text-neutral-900 dark:text-white mt-8 mb-4">The problem (in plain English)</h3>
+						<p>
+							We wanted a clean, concrete way to understand and represent a specific class of functions (Pick functions) using objects you can reason about visually and structurally (graphs). Instead of treating the function like a mysterious black box, the goal was to give it a graph "skeleton" that makes its behavior more interpretable and easier to analyze.
+						</p>
+
+						<h3 class="text-xl md:text-2xl font-brand text-neutral-900 dark:text-white mt-8 mb-4">What I worked on</h3>
+						<ul class="list-disc list-inside space-y-2 text-neutral-600 dark:text-neutral-400">
+							<li>Researched the underlying theory around graph-based models and how they connect to rational Pick functions</li>
+							<li>Helped build and validate the framework connecting graphs ↔ function representations</li>
+							<li>Worked through the math tools that make the connection precise (including Cauchy transforms and Schur complements)</li>
+							<li>Contributed to writing and polishing the final paper, with an emphasis on clarity and structure</li>
+						</ul>
+
+						<!-- Image 1: Research team (left) with text (right) -->
+						<div class="flex flex-col md:flex-row gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/frost/frostteam.jpeg"
+										alt="Research team"
+										class="w-full h-full object-cover object-bottom"
+										loading="lazy"
+									/>
+								</div>
+								<p class="text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center italic">my research team</p>
+							</div>
+							<div class="w-full md:w-7/12">
+								<h3 class="text-xl md:text-2xl font-brand text-neutral-900 dark:text-white mb-4">What made it interesting (my favorite part)</h3>
+								<p class="m-0">
+									A lot of advanced math can feel like it's floating in space. This didn't. The structure mattered. The "shape" of the graph actually does something to the function. Once you internalize that, the work becomes less about memorizing symbols and more about understanding how the system behaves when you tweak the underlying structure.
+								</p>
+							</div>
+						</div>
+
+						<!-- Image 2: JMM with dad (right) with text (left) -->
+						<div class="flex flex-col md:flex-row-reverse gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/frost/jmmts.jpeg"
+										alt="JMM 2024 presentation"
+										class="w-full h-full object-cover object-bottom"
+										loading="lazy"
+									/>
+								</div>
+								<p class="text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center italic">my dad and I at JMM 2024</p>
+							</div>
+							<div class="w-full md:w-7/12">
+								<h3 class="text-xl md:text-2xl font-brand text-neutral-900 dark:text-white mb-4">Communication + presenting</h3>
+								<p class="m-0">
+									I presented the work four times (math department talk, university-wide symposium, Frost Undergraduate Research, and Joint Mathematics Meetings). That ended up being a crash course in explaining technical ideas without losing the plot. It forced me to focus on the "why," not just the derivations, and it sharpened how I communicate complex work to different audiences. Even got a compliment from the dean on my presentation skills ;)
+								</p>
+							</div>
+						</div>
+
+						<!-- Image 3: Math girlies - centered full width -->
+						<div class="my-12 md:my-16">
+							<div class="max-w-2xl mx-auto">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/frost/frostgirls.jpeg"
+										alt="Math research friends"
+										class="w-full h-full object-cover object-bottom"
+										loading="lazy"
+									/>
+								</div>
+								<p class="text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center italic">me and my math girlies!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</PostLayout>

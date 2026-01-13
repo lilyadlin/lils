@@ -8,7 +8,7 @@
 
 如果你发现了 bug，请：
 
-1. 查看 [Issues](https://github.com/ricocc/ricoui-portfolio/issues) 确认该 bug 尚未被报告
+1. 查看 [Issues](https://github.com/lilycc/lilyui-portfolio/issues) 确认该 bug 尚未被报告
 2. 如果是一个新的 bug，请创建一个新的 Issue，包含：
    - 清晰的问题描述
    - 复现步骤
@@ -31,8 +31,8 @@
 
 1. **Fork 项目**
    ```bash
-   git clone https://github.com/your-username/ricoui-portfolio.git
-   cd ricoui-portfolio
+   git clone https://github.com/your-username/lilyui-portfolio.git
+   cd lilyui-portfolio
    ```
 
 2. **创建分支**
@@ -103,9 +103,9 @@
 
 如果遇到问题，可以：
 
-- 查看 [Issues](https://github.com/ricocc/ricoui-portfolio/issues)
+- 查看 [Issues](https://github.com/lilycc/lilyui-portfolio/issues)
 - 创建新的 Issue 提问
-- 联系维护者：hello@ricoui.com
+- 联系维护者：hello@lilyui.com
 
 再次感谢你的贡献！🎉
 

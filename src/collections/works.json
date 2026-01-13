@@ -1,58 +1,66 @@
 [
 	{
-		"name": "RicoOG",
-		"description": "OG Inspiration Library",
-		"tags": ["Open Graph", "Design", "Library"],
-		"image": "/assets/works/ricoog.jpg",
-		"video": "/assets/works/ricoog.mp4",
-		"url": "https://ricoog.com/",
+		"name": "Dreamforce",
+		"description": "End-to-end Dreamforce execution: planning, promotion, logistics, onsite coordination, and follow-up",
+		"tags": ["GTM", "Event-led", "Ops", "Partnerships", "Lifecycle"],
+		"image": "/assets/works/monroe.jpeg",
+		"url": "https://www.linkedin.com/posts/lilyadlin123_dreamforce-activity-7386163979485798400-yQ8w?utm_source=share&utm_medium=member_desktop&rcm=ACoAACrhTRoBnSiRA3HXnno4fCyECVlc-0GHgW4",
 		"isShow": true
 	},
 	{
-		"name": "GradientsHub",
-		"description": "Gradient Resources & Tools",
-		"tags": ["Gradient","Resources","Tools"],
-		"image": "/assets/works/gradientshub.jpg",
-		"video": "/assets/works/gradientshub.mp4",
-		"url": "https://gradientshub.com"
+		"name": "Tailoring to a technical audience",
+		"description": "Built a repeatable multi-channel content engine focused on translating product value into narratives",
+		"expandedDescription": "Built a repeatable multi-channel content engine focused on translating product value into narratives: The big idea is making sure products actually resonate with the people they're built for. I ran multi-channel campaigns where our ICP actually hangs out (for us: LinkedIn + Reddit) and built a repeatable content engine that made a technical product feel clear, human, and worth stopping for. The goal wasn't \"post more.\" It was translating product value into stories people actually get, then iterating based on what landed.",
+		"tags": ["Content", "LinkedIn", "Positioning", "Messaging", "B2B SaaS"],
+		"image": "/assets/works/tech.jpeg",
+		"url": "/work/tailoringcontent",
+		"target": "_self",
+		"isShow": true
 	},
 	{
-		"name": "Luon Models",
-		"description": "Agency Company Website",
-		"tags": ["Agency","Website"],
-		"image": "/assets/works/luonmodels.jpg",
-		"video": "/assets/works/luonmodels.mp4",
-		"url": "/work/luonmodels"
+		"name": "AI sales agent POC",
+		"description": "Built a proof-of-concept AI sales agent for a CRE lead workflow (intake → qualification → handoff)",
+		"tags": ["AI", "Sales Ops", "Automation", "Workflow Design", "Venture Studio"],
+		"image": "/assets/works/ailuv.jpeg",
+		"url": "/work/ai-sales-agent",
+		"target": "_self",
+		"isShow": true
 	},
 	{
-		"name": "Ricoui",
-		"description": "Designer Portfolio",
-		"tags": ["Designer","Portfolio","Open Source"],
-		"image": "/assets/works/ricoui.jpg",
-		"video": "/assets/works/ricoui.mp4",
-		"url": "/work/ricoblog2024"
-
+		"name": "Pitch Decks + Investor Galore",
+		"description": "Spent time in founder rooms—pitch events, demos, and 1:1s",
+		"tags": ["Venture Studio", "Market Research", "GTM Strategy", "Synthesis", "Due Diligence"],
+		"image": "/assets/works/vcdeck.jpeg",
+		"url": "/work/pitch-decks",
+		"target": "_self",
+		"isShow": true
+	},
+	
+	{
+		"name": "Campaigns & Collabs",
+		"description": "Produced creator-led brand integrations with clean storytelling and product placement that doesn't kill authenticity",
+		"tags": ["Creator", "Brand Partnerships", "Video", "Performance Creative", "Fashion"],
+		"image": "/assets/works/collab.jpeg",
+		"url": "/work/passion-4-fashion",
+		"target": "_self",
+		"isShow": true
 	},
 	{
-		"name": "3D Valentines Assets",
-		"description": "Blender Design Resources & Assets",
-		"tags": ["3D","Resources","Assets"],
-		"image": "/assets/works/3d-valentines.jpg",
-		"video": "/assets/works/3d-valentines.mp4",
-		"url": "/work/3dvalentine"
+		"name": "Frost Undergraduate Research (published + talks)",
+		"description": "Did mathematical research in graph theory + dynamic network models",
+		"tags": ["Research", "Mathematics", "Graph Theory", "Academic", "Publishing", "Presentations"],
+		"image": "/assets/works/frost.jpeg",
+		"url": "/work/frost-research",
+		"target": "_self",
+		"isShow": true
 	},
 	{
-		"name": "UIUXDECK",
-		"description": "Design Resources & Tools",
-		"tags": ["Design","Resources","Tools"],
-		"image": "/assets/works/uiuxdeck.jpg",
-		"url": "http://uiuxdeck.com/"
-	},
-	{
-		"name": "Inspoweb",
-		"description": "Web Inspiration Library",
-		"tags": ["Inspiration","Web Collection"],
-		"image": "/assets/works/inspoweb.jpg",
-		"url": "https://inspoweb.com/"
+		"name": "Leading with Inclusivity",
+		"description": "Led social media strategy and later served as VP of DEI on exec board",
+		"tags": ["Leadership", "Community", "Social Media", "DEI", "Strategy"],
+		"image": "/assets/works/dei.jpeg",
+		"url": "/work/leadership-dei",
+		"target": "_self",
+		"isShow": true
 	}
 ]

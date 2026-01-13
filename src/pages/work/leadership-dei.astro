@@ -1,0 +1,97 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+
+const workTitle = "Leading with Inclusivity";
+const workDescription = "Led social media strategy and later served as VP of DEI on exec board";
+const workTags = ["Leadership", "Community", "Social Media", "DEI", "Strategy"];
+---
+<PostLayout
+	title={workTitle}
+	description="Led social media strategy and later served as VP of DEI on exec board. Building inclusive communities and leading with empathy."
+	keywords="Leadership, DEI, Diversity Equity Inclusion, Social Media, Community Building, Alpha Phi, College Leadership"
+>
+	<div class="work article">
+		<main class="work-wrapper">
+				<PageHeader
+					title={workTitle}
+					tags={workTags}
+					className="mb-6 md:mb-8"
+				>
+				</PageHeader>
+			</section>
+			<div class="site-container m-auto">
+				<SeparatorLine />
+			</div>
+			<section class="article-content">
+				<div class="site-container mx-auto my-8 md:my-16 ">
+					<div>
+						<p>
+							In college, I found my way into leadership by accident. I was switching my major to math and wanted to meet more people during the COVID year, so I applied to be Director of Social Media for my sorority. I got the role, ended up owning the chapter's brand and content, and later received an Outstanding Social Media award at the Alpha Phi International Leadership Conference for that work.
+						</p>
+
+						<!-- Image 1: Exec gals (left) with text (right) -->
+						<div class="flex flex-col md:flex-row gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/lship/execgals.JPG"
+										alt="Executive board members"
+										class="w-full h-full object-cover object-bottom"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+							<div class="w-full md:w-7/12">
+								<p class="m-0">
+									The part I'm most proud of isn't just the award, though. It's what I learned about building a community people actually want to be part of. You can't fake culture, and you can't force engagement. You have to listen, show up consistently, and be intentional about the tone you set.
+								</p>
+							</div>
+						</div>
+
+						<!-- Image 2: Philanthropy day (right) with text (left) -->
+						<div class="flex flex-col md:flex-row-reverse gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="overflow-hidden rounded-xl">
+									<img
+										src="/assets/lship/philoday.jpeg"
+										alt="Philanthropy day event"
+										class="w-full h-auto"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+							<div class="w-full md:w-7/12">
+								<p class="m-0">
+									That's a big reason I later served as VP of Diversity, Equity, and Inclusion on exec board. Growing up in the Bay Area with immigrant parents, I was surrounded by different cultures and perspectives, and moving to San Luis Obispo made those differences feel even more obvious. In that role, I focused on creating a chapter environment that felt welcoming for everyone, both members and non-members in our broader community. I implemented small but meaningful practices that encouraged reflection, education, and inclusion, and helped make belonging feel real, not performative.
+								</p>
+							</div>
+						</div>
+
+						<p>
+							Those experiences shaped how I show up today. Whether I'm working with engineers, marketers, or founders, I try to lead the same way: with empathy, curiosity, and the belief that inclusive spaces lead to better ideas, stronger teams, and more human products.
+						</p>
+
+						<!-- Image 3: Alpha Phi conference - centered full width -->
+						<div class="my-12 md:my-16">
+							<div class="max-w-2xl mx-auto">
+								<div class="overflow-hidden rounded-xl">
+									<img
+										src="/assets/lship/aphiconf.JPG"
+										alt="Alpha Phi International Conference"
+										class="w-full h-auto"
+										loading="lazy"
+									/>
+								</div>
+								<p class="text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center italic">Exec board at the Alpha Phi International Conference in 2022!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</PostLayout>
+
+

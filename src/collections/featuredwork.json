@@ -1,58 +1,28 @@
 [
 	{
-		"name": "RicoOG",
-		"description": "OG Inspiration Library",
-		"tags": ["Open Graph", "Design", "Library"],
-		"image": "/assets/works/ricoog.jpg",
-		"video": "/assets/works/ricoog.mp4",
-		"url": "https://ricoog.com/",
+		"name": "Campaigns & Collabs",
+		"description": "Produced creator-led brand integrations with clean storytelling and product placement that doesn't kill authenticity",
+		"tags": ["Creator", "Brand Partnerships", "Video", "Performance Creative", "Fashion"],
+		"image": "/assets/works/collab.jpeg",
+		"url": "/work/passion-4-fashion",
+		"target": "_self",
 		"isShow": true
 	},
 	{
-		"name": "GradientsHub",
-		"description": "Gradient Resources & Tools",
-		"tags": ["Gradient","Resources","Tools"],
-		"image": "/assets/works/gradientshub.jpg",
-		"video": "/assets/works/gradientshub.mp4",
-		"url": "https://gradientshub.com"
+		"name": "Dreamforce",
+		"description": "End-to-end Dreamforce execution: planning, promotion, logistics, onsite coordination, and follow-up",
+		"tags": ["GTM", "Event-led", "Ops", "Partnerships", "Lifecycle"],
+		"image": "/assets/works/monroe.jpeg",
+		"url": "https://www.linkedin.com/posts/lilyadlin123_dreamforce-activity-7386163979485798400-yQ8w?utm_source=share&utm_medium=member_desktop&rcm=ACoAACrhTRoBnSiRA3HXnno4fCyECVlc-0GHgW4",
+		"isShow": true
 	},
 	{
-		"name": "Luon Models",
-		"description": "Company Website",
-		"tags": ["Company","Website","Branding"],
-		"image": "/assets/works/luonmodels.jpg",
-		"video": "/assets/works/luonmodels.mp4",
-		"url": "https://luonmodels.netlify.app/"
-	},
-	{
-		"name": "Ricoui",
-		"description": "Designer Portfolio",
-		"tags": ["Designer","Portfolio","Open Source"],
-		"image": "/assets/works/ricoui.jpg",
-		"video": "/assets/works/ricoui.mp4",
-		"url": "/work/ricoblog2024"
-
-	},
-	{
-		"name": "3D Valentines Assets",
-		"description": "Blender Design Resources & Assets",
-		"tags": ["3D","Resources","Assets"],
-		"image": "/assets/works/3d-valentines.jpg",
-		"video": "/assets/works/3d-valentines.mp4",
-		"url": "/work/3dvalentine"
-	},
-	{
-		"name": "UIUXDECK",
-		"description": "Design Resources & Tools",
-		"tags": ["Design","Resources","Tools"],
-		"image": "/assets/works/uiuxdeck.jpg",
-		"url": "http://uiuxdeck.com/"
-	},
-	{
-		"name": "Inspoweb",
-		"description": "Web Inspiration Library",
-		"tags": ["Inspiration","Web Collection"],
-		"image": "/assets/works/inspoweb.jpg",
-		"url": "https://inspoweb.com/"
+		"name": "Frost Undergraduate Research (published + talks)",
+		"description": "Did mathematical research in graph theory + dynamic network models",
+		"tags": ["Research", "Mathematics", "Graph Theory", "Academic", "Publishing", "Presentations"],
+		"image": "/assets/works/frost.jpeg",
+		"url": "/work/frost-research",
+		"target": "_self",
+		"isShow": true
 	}
 ]

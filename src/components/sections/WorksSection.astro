@@ -9,11 +9,13 @@ interface Props {
 interface Work {
   name: string;
   description?: string;
+  expandedDescription?: string;
   image: string;
   url: string;
   tags?: string[];
   video?: string;
   isShow?: boolean;
+  target?: string;
 }
 
 const { limit } = Astro.props;
@@ -36,6 +38,7 @@ if (limit !== undefined) {
         <WorkCard
           name={work.name}
           description={work.description}
+          expandedDescription={work.expandedDescription}
           image={work.image}
           url={work.url}
           tags={work.tags}
@@ -43,6 +46,7 @@ if (limit !== undefined) {
           isShow={work.isShow}
           layout="featured"
           index={index}
+          target={work.target}
         />
       ))}
   </div>

@@ -4,16 +4,15 @@ import { siteConfig } from "@/config/site";
 import HeroCard from "@/components/home/HeroCard.astro";
 import Layout from "@/layouts/Layout.astro";
 import FeaturedWork from "../components/sections/FeaturedWork.astro";
-import BlogSection from "@/components/sections/BlogSection.astro";
 import SocialCard from "@/components/cards/SocialCard.astro";
 import AnimatedText from "@/components/ui/AnimatedText.astro";
 import Explore from "@/components/sections/Explore.astro";
 ---
 
 <Layout
-title="Rico Portfolio Site 2025"
-description="Welcome to Rico's portfolio site! Explore my work as a web/UI designer with 8+ years of experience in creating captivating visuals and interactive experiences."
-keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative Designer"
+title="Lily Portfolio Site 2026"
+description="Welcome to Lily's portfolio site! Explore my work."
+keywords="Lily, Portfolio, Tech, GTM, Marketing, Fashion"
 >
   <div
     class="relative site-container z-20  w-full mx-auto mt-16 px-4 md:mt-18 lg:mt-20 xl:px-0"
@@ -23,7 +22,7 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
         <!-- Title - AnimatedText animation -->
         <h1 class="mb-4">
           <AnimatedText
-            content="Hi, I'm Rico"
+            content="Happy to have you, I'm Lily"
             delay={0.1}
             duration={0.5}
             stagger={0.08}
@@ -34,8 +33,7 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
         <!-- First description - AnimatedText animation -->
         <div class="mb-2">
           <AnimatedText
-            content="I'm a web/UI designer with 8+ years of experience. I love blending design and code to create captivating visuals and interactive experiences."
-            delay={0.3}
+            content="Working at the intersection of fashion, tech, and storytelling." 
             duration={0.5}
             stagger={0.015}
             class="text-base text-neutral-700 dark:text-neutral-300"
@@ -45,7 +43,18 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
         <!-- Second description - AnimatedText animation -->
         <div class="mb-4">
           <AnimatedText
-            content="I believe great design should be both delightful and solve real-world challenges."
+            content="I like solving problems! Sometimes that’s building go-to-market + content for a startup, other times it’s a never-ending yap sesh with people doing really cool things. Always interested in hearing about new fashion-tech endeavors and creator partnerships, and I love taking something messy and turning it into something people actually understand."
+            delay={0.5}
+            duration={0.5}
+            stagger={0.015}
+            class="text-base text-neutral-700 dark:text-neutral-300"
+          />
+        </div>
+        
+        <!-- Third description - AnimatedText animation -->
+        <div class="mb-4">
+          <AnimatedText
+            content="Grew up in the East Bay, studied Applied Math at Cal Poly SLO, and currently based in the Bay Area (but constantly looking for an excuse to be in NYC bc my brother lives there so I am loyal to the bit)."
             delay={0.5}
             duration={0.5}
             stagger={0.015}
@@ -53,17 +62,37 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
           />
         </div>
 
-        <!-- Button - AOS animation -->
-        <div
-          class=""
-          data-aos="fade-up-sm"
-          data-aos-delay="900"
-          data-aos-duration="500"
-          data-aos-once="true"
-        >
-          <Button url={siteConfig.social.twitter} type="fill" className="m-auto mt-4 text-center sm:text-left sm:m-0 sm:mt-6 max-w-[200px]">
-            Follow me on 𝕏
-          </Button>
+        <!-- Fourth description - AnimatedText animation -->
+        <div class="mb-4">
+          <AnimatedText
+            content="Drawn to two things that don’t seem related until you live them: systems and taste. Especially interested in how technology can make fashion more thoughtful, more personal, and less wasteful." 
+            delay={0.5}
+            duration={0.5}
+            stagger={0.015}
+            class="text-base text-neutral-700 dark:text-neutral-300"
+          />
+        </div>
+
+        <!-- Fifth description - AnimatedText animation -->
+        <div class="mb-4">
+          <AnimatedText
+            content="Things I <3: paint&sip, hand-sewing, strawberry matcha lattes, pilates, trying out a new beli spot... (fan of any and every cuisine)"
+            delay={0.5}
+            duration={0.5}
+            stagger={0.015}
+            class="text-base text-neutral-700 dark:text-neutral-300"
+          />
+        </div>
+
+        <!-- Sixth description - AnimatedText animation -->
+        <div class="mb-4">
+          <AnimatedText
+            content="don't hesitate to reach out!!!"
+            delay={0.5}
+            duration={0.5}
+            stagger={0.015}
+            class="text-base text-neutral-700 dark:text-neutral-300"
+          />
         </div>
 
         <!-- Social Cards - AOS animation -->
@@ -87,9 +116,8 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
         data-aos-once="true"
       >
         <HeroCard
-          imageUrl="/assets/home/gradientshub.jpg"
-          title="Gradientshub"
-          link="https://gradientshub.com"
+          imageUrl="/assets/home/cover.jpg"
+          title="CoverPic"
         />
       </div>
     </div>
@@ -112,21 +140,6 @@ keywords="Rico, Portfolio, Web Design, UI Design, Frontend Development, Creative
     data-aos-duration="600"
     data-aos-once="true"
   >
-    <FeaturedWork title="Featured Work ↓" description="I create innovative and purposeful designs that not only capture attention but also drive meaningful results." limit={5} />
+    <FeaturedWork title="Featured Work ↓" limit={3} />
   </section>
-
-  <section
-    class="mt-26 mb-12"
-    data-aos="fade-up-sm"
-    data-aos-delay="100"
-    data-aos-duration="600"
-    data-aos-once="true"
-  >
-    <BlogSection
-      title="Latest Articles  ↓"
-      description="These are my notes and articles on design, development and life thinking."
-      showViewAllButton={true}
-    />
-  </section>
-
 </Layout>

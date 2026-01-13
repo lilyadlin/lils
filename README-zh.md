@@ -1,4 +1,4 @@
-# Rico Portfolio - 设计师个人作品集网站
+# lily Portfolio - 设计师个人作品集网站
 
 一个基于 Astro 构建的现代化、高性能设计师个人作品集网站模板。采用复古蓝色主题，支持暗色模式，具有精美的动画效果和优秀的用户体验。
 
@@ -165,18 +165,18 @@ export const siteConfig = {
 
 ## 📧 联系方式
 
-- **作者**: Ricoui
-- **博客**: [ricoui.com](https://github.com/ricocc)
-- **邮箱**: hello@ricoui.com
-- **Twitter**: [@ricouii](https://x.com/ricouii)
-- **GitHub**: [@ricocc](https://github.com/ricocc)
+- **作者**: lilyui
+- **博客**: [lilyui.com](https://github.com/lilycc)
+- **邮箱**: hello@lilyui.com
+- **Twitter**: [@lilyuii](https://x.com/lilyuii)
+- **GitHub**: [@lilycc](https://github.com/lilycc)
 
 
 ## 💡 其他产品
 
--  **Rico Blog** - 开源 :  [https://github.com/ricocc/public-portfolio-site](https://github.com/ricocc/public-portfolio-site)
+-  **lily Blog** - 开源 :  [https://github.com/lilycc/public-portfolio-site](https://github.com/lilycc/public-portfolio-site)
 
-- **OG Gallery**: [ricoog.com](https://ricoog.com/)
+- **OG Gallery**: [lilyog.com](https://lilyog.com/)
 
 
 ## 🙏 致谢
@@ -199,11 +199,11 @@ export const siteConfig = {
 
 ## 关于作者
 
-我是Rico，网页/UI设计师，热衷于做些有趣和创意的作品。拥有 UI/UX 设计工作经验，目前专注于网页设计和视觉落地，以及开发项目探索。我平时在博客<a href="https://ricoui.com/" target="_blank">Rico's Blog</a>更新内容。也可以关注我的小红书 [@Rico的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 推特 [@ricouii](https://x.com/ricouii).
+我是lily，网页/UI设计师，热衷于做些有趣和创意的作品。拥有 UI/UX 设计工作经验，目前专注于网页设计和视觉落地，以及开发项目探索。我平时在博客<a href="https://lilyui.com/" target="_blank">lily's Blog</a>更新内容。也可以关注我的小红书 [@lily的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 推特 [@lilyuii](https://x.com/lilyuii).
 
 或者添加我的微信，交个朋友
 
-<img src="https://ricoui.com/assets/wechat.png" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://lilyui.com/assets/wechat.png" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ## 💜 支持作者
@@ -211,7 +211,7 @@ export const siteConfig = {
 
 如果觉得有所帮助的话，一点点支持就可以大大激励创作者的热情，感谢！
 
-<img src="https://ricoui.com/assets/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://lilyui.com/assets/zanshangma.jpg" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ---

@@ -1,0 +1,67 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+
+const workTitle = "AI sales agent POC";
+const workDescription = "Built a proof-of-concept AI sales agent for a CRE top-of-funnel workflow";
+const workTags = ["AI", "Sales Ops", "Automation", "Workflow Design", "Venture Studio"];
+---
+<PostLayout
+	title={workTitle}
+	description="Built a proof-of-concept AI sales agent for a CRE top-of-funnel workflow (lead intake → qualification → handoff)."
+	keywords="AI, Sales Automation, CRE, Workflow Design, Product Experimentation, Relevance AI, Applied Math"
+>
+	<div class="work article">
+		<main class="work-wrapper">
+				<PageHeader
+					title={workTitle}
+					tags={workTags}
+					className="mb-6 md:mb-8"
+				>
+				</PageHeader>
+			</section>
+			<div class="site-container m-auto">
+				<SeparatorLine />
+			</div>
+			<section class="article-content">
+				<div class="site-container mx-auto my-8 md:my-16 ">
+					<div>
+						<p>
+							Built a proof-of-concept AI sales agent for a CRE top-of-funnel workflow (lead intake → qualification → handoff). The point wasn't to "ship AI" just to say we did. It was to sanity-check what would actually be useful in a loan officer's day, design a workflow that wouldn't feel annoying or extra, and pressure-test prompts + guardrails before anyone invested real engineering time.
+						</p>
+						<p>
+							I treated it like a practical product experiment: map the real-world flow, figure out where an agent could genuinely remove friction (without making things feel robotic), and define what "good" looks like in the handoff. The outcome was a clear, testable flow and a set of prompts designed for real usage, not a demo.
+						</p>
+						<p>
+							With an applied math background, I'm comfortable rolling up my sleeves and learning new tools quickly. I started this project before agent-building tools became mainstream, so I prototyped in Relevance AI. If I were to build it out fully today, I'd build it from scratch rather than rely on a platform that limits customization.
+						</p>
+
+						<!-- Project Slides -->
+						<div class="mt-16 md:mt-20">
+							<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+								<div class="overflow-hidden rounded-xl">
+									<img
+										src="/assets/agent/poc1.png"
+										alt="POC1: Agentic AI Sales Agent"
+										class="w-full h-auto"
+										loading="lazy"
+									/>
+								</div>
+								<div class="overflow-hidden rounded-xl">
+									<img
+										src="/assets/agent/poc2.png"
+										alt="POC2: Agentic AI Future Fleet"
+										class="w-full h-auto"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</PostLayout>
+

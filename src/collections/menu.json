@@ -1,18 +1,10 @@
 [
 	{
-		"name": "Home",
+		"name": "home",
 		"url": "/"
 	},
 	{
-		"name": "Writing",
-		"url": "/blog"
-	},
-	{
-		"name": "Works",
+		"name": "stuff",
 		"url": "/works"
-	},
-	{
-		"name": "About",
-		"url": "/about"
 	}
 ]

@@ -1,0 +1,81 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+
+const workTitle = "Tailoring to a technical audience";
+const workDescription = "Built a repeatable multi-channel content engine focused on translating product value into narratives";
+const workTags = ["Content", "LinkedIn", "Positioning", "Messaging", "B2B SaaS"];
+---
+<PostLayout
+	title={workTitle}
+	description="Built a repeatable multi-channel content engine focused on translating product value into narratives for technical audiences."
+	keywords="Content Marketing, LinkedIn, B2B SaaS, Technical Content, Content Strategy, Analytics, GA4, GTM, Looker Studio"
+>
+	<div class="work article">
+		<main class="work-wrapper">
+				<PageHeader
+					title={workTitle}
+					tags={workTags}
+					className="mb-6 md:mb-8"
+				>
+				</PageHeader>
+			</section>
+			<div class="site-container m-auto">
+				<SeparatorLine />
+			</div>
+			<section class="article-content">
+				<div class="site-container mx-auto my-8 md:my-16 ">
+					<div>
+						<p>
+							At my first gig post-grad, I built a repeatable multi-channel content engine focused on translating product value into narratives: The big idea is making sure products actually resonate with the people they're built for. I ran campaigns where our ICP actually hangs out (for us: LinkedIn + Reddit) and made a technical product feel clear, human, and worth stopping for. The goal wasn't "post more." It was translating product value into stories people actually get, then iterating based on what landed.
+						</p>
+
+						<!-- Image 1: Bluecanvas team (left) with text (right) -->
+						<div class="flex flex-col md:flex-row gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/tailor/IMG_7609.jpeg"
+										alt="Bluecanvas team"
+										class="w-full h-full object-cover"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+							<div class="w-full md:w-7/12">
+								<p class="m-0">
+									I've created content for a lot of different audiences, but Salesforce DevOps was a niche I hadn't really lived in until now. For me, the key was understanding where technical users actually hang out; not just LinkedIn, but discussion forums, Discords, and comment threads where people are honest. I spent time reading, asking questions with intention, and jumping into conversations so I could write in a way that felt native to the space. That's what made the content resonate.
+								</p>
+							</div>
+						</div>
+
+						<p>
+							Using that approach, I launched a Reddit ad campaign that walked the tightrope between witty/sarcastic and not sounding arrogant. It worked: one ad reached 757,201 impressions with a $0.40 eCPM and $0.07 CPC, and the second reached 1,166,203 impressions with a $0.35 eCPM and $0.08 CPC — both on a $5/day budget, landing well above typical benchmarks.
+						</p>
+
+						<!-- Image 2: Canvas at the Court (right) with text (left) -->
+						<div class="flex flex-col md:flex-row-reverse gap-6 items-center my-8 md:my-12">
+							<div class="w-full md:w-5/12 flex-shrink-0">
+								<div class="aspect-[4/3] overflow-hidden rounded-xl">
+									<img
+										src="/assets/tailor/IMG_9542.JPG"
+										alt="Canvas at the Court event"
+										class="w-full h-full object-cover"
+										loading="lazy"
+									/>
+								</div>
+							</div>
+							<div class="w-full md:w-7/12">
+								<p class="m-0">
+									On the analytics side, I debugged the GA4/GTM setup, improved attribution (72%+ Unassigned down to ~5%), and packaged it into Looker Studio dashboards + a lightweight workflow so the team could trust the numbers week to week.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</PostLayout>
+

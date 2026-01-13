@@ -1,4 +1,4 @@
-# Rico Portfolio - Designer Portfolio Website
+# lily Portfolio - Designer Portfolio Website
 
 > [中文文档](README-zh.md) | English
 
@@ -165,18 +165,18 @@ Create new MDX files in the `src/content/post/` directory. The project uses Astr
 
 ## 📧 Contact
 
-- **Author**: Ricoui
-- **Blog**: [ricoui.com](https://github.com/ricocc)
-- **Email**: hello@ricoui.com
-- **Twitter**: [@ricouii](https://x.com/ricouii)
-- **GitHub**: [@ricocc](https://github.com/ricocc)
+- **Author**: lilyui
+- **Blog**: [lilyui.com](https://github.com/lilycc)
+- **Email**: hello@lilyui.com
+- **Twitter**: [@lilyuii](https://x.com/lilyuii)
+- **GitHub**: [@lilycc](https://github.com/lilycc)
 
 
 ## 💡 Other Products
 
-- **Rico Blog** - Open Source: [https://github.com/ricocc/public-portfolio-site](https://github.com/ricocc/public-portfolio-site)
+- **lily Blog** - Open Source: [https://github.com/lilycc/public-portfolio-site](https://github.com/lilycc/public-portfolio-site)
 
-- **OG Gallery**: [ricoog.com](https://ricoog.com/)
+- **OG Gallery**: [lilyog.com](https://lilyog.com/)
 
 
 ## 🙏 Acknowledgments
@@ -188,19 +188,19 @@ Create new MDX files in the `src/content/post/` directory. The project uses Astr
 
 ## About the Author
 
-I'm Rico, a web/UI designer passionate about creating fun and creative work. I have experience in UI/UX design and am currently focused on web design, visual implementation, and exploring development projects. I regularly update my blog on <a href="https://ricoui.com/" target="_blank">Rico's Blog</a>. You can also follow me on Xiaohongshu  [@Rico的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 X [@ricouii](https://x.com/ricouii).
+I'm lily, a web/UI designer passionate about creating fun and creative work. I have experience in UI/UX design and am currently focused on web design, visual implementation, and exploring development projects. I regularly update my blog on <a href="https://lilyui.com/" target="_blank">lily's Blog</a>. You can also follow me on Xiaohongshu  [@lily的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 X [@lilyuii](https://x.com/lilyuii).
 
 
 Or add me on WeChat—let’s be friends.
 
-<img src="https://ricoui.com/assets/wechat.png" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://lilyui.com/assets/wechat.png" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
 ## 💜 Support the Author
 
 If you’ve found this helpful, even a small contribution can greatly encourage creators. Thank you!
 
-<img src="https://ricoui.com/assets/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
+<img src="https://lilyui.com/assets/zanshangma.jpg" alt="lilycc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 <a href="https://ko-fi.com/T6T817U4KZ" target="_blank" style="display:inline-block;margin:.5rem auto 1rem;" data-astro-cid-wlrjxfd7=""><img height="44" style=" border:0px;height:44px;" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" data-astro-cid-wlrjxfd7=""></a>
 
