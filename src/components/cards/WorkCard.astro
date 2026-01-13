@@ -1,4 +1,6 @@
 ---
+import { base } from "@/config/site";
+
 interface Props {
   name: string;          // Required
   image: string;         // Required
@@ -30,6 +32,9 @@ const {
 // Generate stable id for each video for precise playback control
 const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
 const expandId = `workcard-expand-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
+
+// Add base path for internal links
+const href = url.startsWith('http') ? url : base + url;
 ---
 
 <article
@@ -204,7 +209,7 @@ const expandId = `workcard-expand-${index}-${name.replace(/[^a-z0-9]+/gi, '-').t
 
   <!-- Link overlay for entire card -->
   <a
-    href={url}
+    href={href}
     target={target}
     rel={target === "_blank" ? "noopener noreferrer" : undefined}
     class="absolute inset-0 z-10"
