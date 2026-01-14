@@ -1,5 +1,6 @@
 ---
 import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
 import PageHeader from "@/components/elements/PageHeader.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
@@ -36,7 +37,7 @@ const workTags = ["Venture Studio", "Market Research", "GTM Strategy", "Synthesi
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/investor/IMG_9812.jpeg"
+										src={base + "/assets/investor/IMG_9812.jpeg"}
 										alt="Pitch event"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"
@@ -55,7 +56,7 @@ const workTags = ["Venture Studio", "Market Research", "GTM Strategy", "Synthesi
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/investor/IMG_7257.jpeg"
+										src={base + "/assets/investor/IMG_7257.jpeg"}
 										alt="Founder demo session"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"

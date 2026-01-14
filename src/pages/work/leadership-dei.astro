@@ -1,5 +1,6 @@
 ---
 import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
 import PageHeader from "@/components/elements/PageHeader.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
@@ -36,7 +37,7 @@ const workTags = ["Leadership", "Community", "Social Media", "DEI", "Strategy"];
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/lship/execgals.JPG"
+										src={base + "/assets/lship/execgals.JPG"}
 										alt="Executive board members"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"
@@ -55,7 +56,7 @@ const workTags = ["Leadership", "Community", "Social Media", "DEI", "Strategy"];
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="overflow-hidden rounded-xl">
 									<img
-										src="/assets/lship/philoday.jpeg"
+										src={base + "/assets/lship/philoday.jpeg"}
 										alt="Philanthropy day event"
 										class="w-full h-auto"
 										loading="lazy"
@@ -78,7 +79,7 @@ const workTags = ["Leadership", "Community", "Social Media", "DEI", "Strategy"];
 							<div class="max-w-2xl mx-auto">
 								<div class="overflow-hidden rounded-xl">
 									<img
-										src="/assets/lship/aphiconf.JPG"
+										src={base + "/assets/lship/aphiconf.JPG"}
 										alt="Alpha Phi International Conference"
 										class="w-full h-auto"
 										loading="lazy"

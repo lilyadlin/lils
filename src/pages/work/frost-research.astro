@@ -1,5 +1,6 @@
 ---
 import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
 import PageHeader from "@/components/elements/PageHeader.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
@@ -52,7 +53,7 @@ const workTags = ["Research", "Mathematics", "Graph Theory", "Academic", "Publis
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/frost/frostteam.jpeg"
+										src={base + "/assets/frost/frostteam.jpeg"}
 										alt="Research team"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"
@@ -73,7 +74,7 @@ const workTags = ["Research", "Mathematics", "Graph Theory", "Academic", "Publis
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/frost/jmmts.jpeg"
+										src={base + "/assets/frost/jmmts.jpeg"}
 										alt="JMM 2024 presentation"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"
@@ -94,7 +95,7 @@ const workTags = ["Research", "Mathematics", "Graph Theory", "Academic", "Publis
 							<div class="max-w-2xl mx-auto">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/frost/frostgirls.jpeg"
+										src={base + "/assets/frost/frostgirls.jpeg"}
 										alt="Math research friends"
 										class="w-full h-full object-cover object-bottom"
 										loading="lazy"

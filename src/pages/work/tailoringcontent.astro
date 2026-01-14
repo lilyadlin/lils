@@ -1,5 +1,6 @@
 ---
 import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
 import PageHeader from "@/components/elements/PageHeader.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
@@ -36,7 +37,7 @@ const workTags = ["Content", "LinkedIn", "Positioning", "Messaging", "B2B SaaS"]
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/tailor/IMG_7609.jpeg"
+										src={base + "/assets/tailor/IMG_7609.jpeg"}
 										alt="Bluecanvas team"
 										class="w-full h-full object-cover"
 										loading="lazy"
@@ -59,7 +60,7 @@ const workTags = ["Content", "LinkedIn", "Positioning", "Messaging", "B2B SaaS"]
 							<div class="w-full md:w-5/12 flex-shrink-0">
 								<div class="aspect-[4/3] overflow-hidden rounded-xl">
 									<img
-										src="/assets/tailor/IMG_9542.JPG"
+										src={base + "/assets/tailor/IMG_9542.JPG"}
 										alt="Canvas at the Court event"
 										class="w-full h-full object-cover"
 										loading="lazy"

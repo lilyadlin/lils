@@ -1,5 +1,6 @@
 ---
 import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
 import PageHeader from "@/components/elements/PageHeader.astro";
 import SeparatorLine from "@/components/elements/SeparatorLine.astro";
 
@@ -42,7 +43,7 @@ const workTags = ["AI", "Sales Ops", "Automation", "Workflow Design", "Venture S
 							<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
 								<div class="overflow-hidden rounded-xl">
 									<img
-										src="/assets/agent/poc1.png"
+										src={base + "/assets/agent/poc1.png"}
 										alt="POC1: Agentic AI Sales Agent"
 										class="w-full h-auto"
 										loading="lazy"
@@ -50,7 +51,7 @@ const workTags = ["AI", "Sales Ops", "Automation", "Workflow Design", "Venture S
 								</div>
 								<div class="overflow-hidden rounded-xl">
 									<img
-										src="/assets/agent/poc2.png"
+										src={base + "/assets/agent/poc2.png"}
 										alt="POC2: Agentic AI Future Fleet"
 										class="w-full h-auto"
 										loading="lazy"
