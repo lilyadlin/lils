@@ -21,13 +21,13 @@ const imageSrc = imageUrl.startsWith('http') || imageUrl.startsWith('data:') ? i
 
 <div class="relative z-20 w-full web-case" data-href={link}>
     <div
-        class="case-solid relative w-full h-full p-3 border-3 border-solid border-primary dark:border-primary"
+        class="case-solid relative w-full h-full p-3 border-3 border-solid border-[#F4C9D6] dark:border-[#F4C9D6]"
         >
-        <div class="case-square absolute top-[-5px] left-[-5px] border-2 border-solid border-primary dark:border-primary"></div>
-        <div class="case-square absolute top-[-5px] right-[-5px] border-2  border-solid border-primary dark:border-primary"></div>
-        <div class="case-square absolute bottom-[-5px] left-[-5px] border-2  border-solid border-primary dark:border-primary">
+        <div class="case-square absolute top-[-5px] left-[-5px] border-2 border-solid border-[#F4C9D6] dark:border-[#F4C9D6]"></div>
+        <div class="case-square absolute top-[-5px] right-[-5px] border-2  border-solid border-[#F4C9D6] dark:border-[#F4C9D6]"></div>
+        <div class="case-square absolute bottom-[-5px] left-[-5px] border-2  border-solid border-[#F4C9D6] dark:border-[#F4C9D6]">
         </div>
-        <div class="case-square absolute bottom-[-5px] right-[-5px] border-2  border-solid border-primary dark:border-primary"></div>
+        <div class="case-square absolute bottom-[-5px] right-[-5px] border-2  border-solid border-[#F4C9D6] dark:border-[#F4C9D6]"></div>
 
         <div class="relative z-20 w-full">
             <div class="relative top-0 left-0 w-full aspect-[6/7] overflow-hidden rounded-xl case-go">
@@ -145,10 +145,10 @@ const imageSrc = imageUrl.startsWith('http') || imageUrl.startsWith('data:') ? i
     </div>
     {title && (
     <div
-    class="absolute left-[32px] text-center top-[-22px] h-[22px] leading-[22px] w-auto px-3 overflow-hidden rounded-tl-[6px] rounded-tr-[6px] bg-primary dark:bg-primary"
+    class="absolute left-[32px] text-center top-[-22px] h-[22px] leading-[22px] w-auto px-3 overflow-hidden rounded-tl-[6px] rounded-tr-[6px] bg-[#F4C9D6] dark:bg-[#F4C9D6]"
     >
     <p
-      class="text-[11px] font-normal text-center text-white"
+      class="text-[11px] font-normal text-center text-[#3E2723] dark:text-[#3E2723]"
     >
         {title}
     </p>

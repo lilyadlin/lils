@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Dreamforce",
+		"name": "dreamforce",
 		"description": "End-to-end Dreamforce execution: planning, promotion, logistics, onsite coordination, and follow-up",
 		"tags": ["GTM", "Event-led", "Ops", "Partnerships", "Lifecycle"],
 		"image": "/assets/works/monroe.jpeg",
@@ -8,7 +8,7 @@
 		"isShow": true
 	},
 	{
-		"name": "Tailoring to a technical audience",
+		"name": "tailoring to a technical audience",
 		"description": "Built a repeatable multi-channel content engine focused on translating product value into narratives",
 		"expandedDescription": "Built a repeatable multi-channel content engine focused on translating product value into narratives: The big idea is making sure products actually resonate with the people they're built for. I ran multi-channel campaigns where our ICP actually hangs out (for us: LinkedIn + Reddit) and built a repeatable content engine that made a technical product feel clear, human, and worth stopping for. The goal wasn't \"post more.\" It was translating product value into stories people actually get, then iterating based on what landed.",
 		"tags": ["Content", "LinkedIn", "Positioning", "Messaging", "B2B SaaS"],
@@ -27,7 +27,7 @@
 		"isShow": true
 	},
 	{
-		"name": "Pitch Decks + Investor Galore",
+		"name": "pitch decks + investor galore",
 		"description": "Spent time in founder rooms—pitch events, demos, and 1:1s",
 		"tags": ["Venture Studio", "Market Research", "GTM Strategy", "Synthesis", "Due Diligence"],
 		"image": "/assets/works/vcdeck.jpeg",
@@ -37,7 +37,7 @@
 	},
 	
 	{
-		"name": "Campaigns & Collabs",
+		"name": "campaigns & collabs",
 		"description": "Produced creator-led brand integrations with clean storytelling and product placement that doesn't kill authenticity",
 		"tags": ["Creator", "Brand Partnerships", "Video", "Performance Creative", "Fashion"],
 		"image": "/assets/works/collab.jpeg",
@@ -46,7 +46,7 @@
 		"isShow": true
 	},
 	{
-		"name": "Frost Undergraduate Research (published + talks)",
+		"name": "frost undergraduate research (published + talks)",
 		"description": "Did mathematical research in graph theory + dynamic network models",
 		"tags": ["Research", "Mathematics", "Graph Theory", "Academic", "Publishing", "Presentations"],
 		"image": "/assets/works/frost.jpeg",
@@ -55,7 +55,7 @@
 		"isShow": true
 	},
 	{
-		"name": "Leading with Inclusivity",
+		"name": "leading with inclusivity",
 		"description": "Led social media strategy and later served as VP of DEI on exec board",
 		"tags": ["Leadership", "Community", "Social Media", "DEI", "Strategy"],
 		"image": "/assets/works/dei.jpeg",

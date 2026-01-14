@@ -1,5 +1,4 @@
 /* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 
@@ -11,7 +10,7 @@
 
 /* Define theme font mappings */
 @theme {
-  --font-brand: "Instrument Serif", ui-sans-serif, system-ui, Noto Sans SC, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-brand: "Helvetica Neue", "Helvetica", "Arial", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sans: "Inter", ui-sans-serif, system-ui, Noto Sans SC, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-body: "Inter", ui-sans-serif, system-ui, Noto Sans SC, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --max-screen: 1200px;
@@ -29,26 +28,26 @@
   --color-neutral-900: #19222f;
   --color-neutral-950: #10161f;
 
-  --color-primary: #2d6dc3;
-  --color-primary-rgb: 45, 109, 195;
-  --color-primary-strong: #0066ff;
-  --color-primary-dark: #2d6dc3;
-  --color-primary-light: #8fb9ff;
-  --color-primary-light-dark: #bcd8ff;
-  --color-primary-lighter: #6da7ff;
+  --color-primary: #3E2723;
+  --color-primary-rgb: 62, 39, 35;
+  --color-primary-strong: #2E1F1B;
+  --color-primary-dark: #2E1F1B;
+  --color-primary-light: #F4C9D6;
+  --color-primary-light-dark: #F4C9D6;
+  --color-primary-lighter: #F9DDE5;
   /* Article-specific variables */
   --color-primary-bg: var(--color-bg-primary-light);
   --color-primary-bg-light: var(--color-bg-secondary);
 
 
-  --color-btn-primary: #2d6dc3;
-  --color-btn-primary-hover: #0066ff;
-  --color-btn-primary-dark: #2871e9;
-  --color-btn-primary-dark-hover: #2d6dc3;
+  --color-btn-primary: #3E2723;
+  --color-btn-primary-hover: #2E1F1B;
+  --color-btn-primary-dark: #3E2723;
+  --color-btn-primary-dark-hover: #2E1F1B;
 
   /* Accent colors */
-  --color-accent: #fad13b;
-  --color-accent-light: #faeb75;
+  --color-accent: #F4C9D6;
+  --color-accent-light: #F9DDE5;
 
   /* Background colors */
 
@@ -62,28 +61,29 @@
 
 
   /* Text colors */
-  --color-text-primary: #2d6dc3;
+  --color-text-primary: #3E2723;
   --color-text-secondary: #3f4a5a;
   --color-text-tertiary: #7a6550;
 
-  --color-text-primary-dark: #3884eb;
+  --color-text-primary-dark: #F4C9D6;
   --color-text-secondary-dark: #c5cedb;
-  --color-text-tertiary-dark: #9bb3d7;
+  --color-text-tertiary-dark: #F9DDE5;
 }
 
 /* Dark mode variable overrides */
 html.dark {
-  --color-primary-rgb: 56, 132, 235;
-  --color-primary-light-dark: #3884eb;
-  --color-primary-lighter: #8fb9ff;
-  --color-primary-bg: rgba(56, 132, 235, 0.15);
-  --color-primary-bg-light: rgba(56, 132, 235, 0.05);
+  --color-primary-rgb: 244, 201, 214;
+  --color-primary-light-dark: #F4C9D6;
+  --color-primary-lighter: #F9DDE5;
+  --color-primary-bg: rgba(244, 201, 214, 0.15);
+  --color-primary-bg-light: rgba(244, 201, 214, 0.05);
 }
 
 /* Add typography styles */
 @layer components {
   .font-brand{
-    font-weight: 400!important;
+    font-weight: 700!important;
+    font-style: italic!important;
   }
   .prose {
     max-width: 65ch;

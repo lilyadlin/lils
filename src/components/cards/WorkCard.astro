@@ -86,7 +86,7 @@ const videoSrc = video ? (video.startsWith('http') ? video : base + video) : und
 
     <!-- Link button shown on hover -->
     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-white/95 backdrop-blur-sm shadow-lg transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 group-hover:scale-110">
+      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#F4C9D6] group-hover:bg-[#3E2723] backdrop-blur-sm shadow-lg transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 group-hover:scale-110">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -97,7 +97,7 @@ const videoSrc = video ? (video.startsWith('http') ? video : base + video) : und
           stroke-width="2.5"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="text-primary"
+          class="text-[#3E2723] group-hover:text-[#F4C9D6] transition-colors duration-500"
         >
           <path d="M7 7h10v10"></path>
           <path d="M7 17 17 7"></path>
@@ -147,7 +147,7 @@ const videoSrc = video ? (video.startsWith('http') ? video : base + video) : und
             </svg>
           </label>
         ) : (
-          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light transition-all duration-300 group-hover:bg-primary dark:group-hover:bg-primary-light group-hover:text-white dark:group-hover:text-neutral-900 group-hover:rotate-45">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-[#F4C9D6] dark:bg-[#F4C9D6] text-[#3E2723] dark:text-[#3E2723] transition-all duration-300 group-hover:bg-[#3E2723] dark:group-hover:bg-[#3E2723] group-hover:text-[#F4C9D6] dark:group-hover:text-[#F4C9D6] group-hover:rotate-45">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
