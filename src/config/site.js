@@ -2,8 +2,8 @@
 // Note: Please set the correct PUBLIC_SITE_URL in .env file after first deployment
 const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://portfolio.lilyui.com/';
 
-// Export base URL for navigation
-export const base = import.meta.env.BASE_URL;
+// Export base URL for navigation (remove trailing slash for consistent concatenation)
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export const siteConfig = {
 	title: "Lily Adlin",
