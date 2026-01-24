@@ -1,0 +1,120 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import { base } from "@/config/site";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+
+const workTitle = "fashion tech directory";
+const workDescription = "Built a searchable directory of 78 fashion tech companies with structured filters + in-browser semantic search";
+const workTags = ["Personal Project", "Search", "React", "Embeddings", "Semantic Retrieval", "Data", "Shipping"];
+---
+<PostLayout
+	title={workTitle}
+	description="Built a searchable directory of 78 fashion tech companies with structured filters + in-browser semantic search (MiniLM embeddings + cosine similarity)."
+	keywords="Fashion Tech, Directory, Search, Semantic Search, Embeddings, React, MiniLM, Cosine Similarity"
+>
+	<div class="work article">
+		<main class="work-wrapper">
+				<PageHeader
+					title={workTitle}
+					tags={workTags}
+					className="mb-6 md:mb-8"
+				>
+				</PageHeader>
+			</section>
+			<div class="site-container m-auto">
+				<SeparatorLine />
+			</div>
+			<section class="article-content">
+				<div class="site-container mx-auto my-8 md:my-16 ">
+					<div>
+						<!-- Cover image -->
+						<div class="w-full mb-8 md:mb-12">
+							<div class="aspect-video overflow-hidden rounded-xl">
+								<img
+									src={base + "/assets/ftech.png"}
+									alt="Fashion Tech Directory"
+									class="w-full h-full object-cover"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+
+						<p>
+							I kept running into the same problem: I'd hear about a new fashion tech company, go to look it up, and it either didn't have a LinkedIn page yet or it was basically invisible on search. And even when I did find it, "are they hiring?" turned into a manual scavenger hunt across random job pages. So I built a small thing I genuinely needed: a directory that makes discovery + filtering actually fast.
+						</p>
+
+						<h2>the problem (in plain English)</h2>
+						<p>
+							Fashion tech is early. A lot of companies aren't indexed well, don't show up cleanly on LinkedIn, and don't fit neat categories. I wanted one place where I could answer: remote-friendly AI styling startups that are actually hiring right now, without 10 tabs open.
+						</p>
+
+						<h2>what i built</h2>
+						<p>
+							Fashion Tech Directory is a web app with 78 companies right now. Each company has structured fields (category, business model, stage, location, hiring status) plus a short description so results aren't just a dead list. Filters narrow the set, then search ranks what's left.
+						</p>
+
+						<div class="flex flex-wrap gap-4 my-6">
+							<a
+								href="https://fashiontech-nine.vercel.app"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary-dark dark:text-primary-light rounded-lg transition-colors duration-300 font-medium"
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+									<polyline points="15 3 21 3 21 9"></polyline>
+									<line x1="10" y1="14" x2="21" y2="3"></line>
+								</svg>
+								Demo
+							</a>
+							<a
+								href="https://github.com/lilyadlin/fashion-tech-directory"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary-dark dark:text-primary-light rounded-lg transition-colors duration-300 font-medium"
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+								</svg>
+								GitHub
+							</a>
+						</div>
+
+						<h2>search (keyword + semantic)</h2>
+						<p>
+							I treated this like a retrieval problem and shipped two modes:
+						</p>
+						<ul>
+							<li><strong>Keyword search:</strong> a fast baseline when the user has exact intent.</li>
+							<li><strong>Semantic search:</strong> embeddings + cosine similarity so phrasing doesn't have to match perfectly (ex: "eco friendly" can still surface "sustainable materials" companies).</li>
+						</ul>
+
+						<h2>semantic search runs in the browser</h2>
+						<p>
+							This was important to me: no external API calls. I run all-MiniLM-L6-v2 locally in the browser using @xenova/transformers. Company embeddings are precomputed at build time, then the user's query gets embedded at runtime and ranked by cosine similarity.
+						</p>
+
+						<h2>annoying edge cases (aka what made it real)</h2>
+						<p>
+							<strong>Careers link 404s:</strong> not every company uses /careers or /jobs, so I stopped guessing and made careers links an explicit field, with guardrails so the CTA falls back gracefully when it's missing.
+						</p>
+						<p>
+							<strong>Exact-match failures:</strong> keyword search alone wasn't enough, which is why semantic retrieval became a real upgrade.
+						</p>
+
+						<h2>how i checked myself</h2>
+						<p>
+							I kept an evaluation folder and a small query suite so I could re-run searches and make sure changes actually improved top results instead of just "feeling better."
+						</p>
+
+						<h2>next steps</h2>
+						<p>
+							If I keep building: automated link validation, a bigger evaluation set, and lightweight tests around filter/search correctness as the dataset grows.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</PostLayout>

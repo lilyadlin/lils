@@ -1,5 +1,14 @@
 [
 	{
+		"name": "fashion tech directory",
+		"description": "Built a searchable directory of 78 fashion tech companies with structured filters + in-browser semantic search (MiniLM embeddings + cosine similarity).",
+		"tags": ["Search", "Embeddings", "React", "Shipping", "Fashion Tech"],
+		"image": "/assets/ftech.png",
+		"url": "/work/fashion-tech-directory",
+		"target": "_self",
+		"isShow": true
+	},
+	{
 		"name": "dreamforce",
 		"description": "End-to-end Dreamforce execution: planning, promotion, logistics, onsite coordination, and follow-up",
 		"tags": ["GTM", "Event-led", "Ops", "Partnerships", "Lifecycle"],
